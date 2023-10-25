@@ -1,0 +1,6 @@
+.section-404 .s-header__sub {
+  color: rgb(var(--color-accent-rgb));
+}
+.section-404 .field__text {
+  padding-right: 56px;
+}

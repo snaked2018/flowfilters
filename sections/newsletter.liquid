@@ -1,0 +1,134 @@
+{%- liquid
+  assign classes = 's-header pb-0'
+  assign content_align = section.settings.content_alignment
+  assign section_id = section.id | md5 | truncate: 12, ""
+  assign frm_id = section_id | prepend: 'newsletterForm-'
+-%}
+{% if section.settings.image %}
+  {%- liquid
+    assign section_class ='p-relative d-flex middle-xs center-xs'
+    assign section_style ='style="--mh-xs:70vh;--mh-sm:50vh"'
+    assign newsletter_form_class = ' s-text-pb '
+    assign alt_image = section.settings.image.alt | default: section.settings.image.image | split: '/' | last
+    assign media_image = section.settings.image | image_url: width: image.width | image_tag: widths: '750, 950, 1024, 1200, 1400, 1600, 1800, 2000', sizes: '(min-width: 361px) calc(100vw/2), calc(100vw/3)', alt: alt_image, class: 'of-cover media w-100 h-100'
+    assign classes = 's-card__header pb-0'
+  -%}
+  {% capture newsletter_image %}
+    <div class="sht-mask p-absolute w-100 h-100 corner-radius-lg" style="--overlay: {{ section.settings.image_overlay_opacity }}">
+      {% render 'image', image_item: media_image, image_wrap_classes: 'h-100', image_classes: 'h-100 js-animate anm anm-zoomOut' %}
+    </div>
+  {% endcapture %}
+{% endif %}
+<div class="ctnr" role="region" aria-labelledby="sectionHeading-{{ section_id }}" data-ui-component="Newsletter Section">
+  <div class="bs-card corner-radius-lg {{ section_class }} {{ section.settings.color_scheme }}" {{ section_style }}>
+    {{ newsletter_image }}
+    <div class="s-card zi-1 w-100 middle-xs">
+      {% render 'section-header',
+        classes: classes,
+        subheading: section.settings.subheading,
+        heading: section.settings.heading,
+        description: section.settings.description,
+        content_align: content_align,
+        section: section
+      %}
+      <div class="s-footer-sm {{ newsletter_form_class }} clm p-zero js-animate anm anm-fadeInUpLarge {{ content_align }}" style="--w-md:6; --duration: .7s; --delay: .15s;">
+        {% render 'newsletter-form', form_id: frm_id , form_name: 'newsletterForm', content_align: content_align %}
+      </div>
+    </div>
+  </div>
+  {%- render 'section-id', section: section -%}
+</div>
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "range",
+      "unit": "%",
+      "max": 90,
+      "min": 0,
+      "step": 1,
+      "default": 30,
+      "id": "image_overlay_opacity",
+      "label": "t:general.settings.overlay_opacity.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:general.settings.color_scheme.label",
+      "info": "t:general.settings.color_scheme.info",
+      "default": "color-scheme-1 background",
+      "options": [
+        {
+          "value": "color-scheme-1 background",
+          "label": "t:general.settings.scheme_1.label"
+        },
+        {
+          "value": "color-scheme-2 background",
+          "label": "t:general.settings.scheme_2.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:general.settings.section_subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:general.settings.section_heading.label",
+      "default": "Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "t:general.settings.section_description.label"
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_layout.content"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:general.settings.content_alignment.label",
+      "default": "ta-center m-auto",
+      "options": [
+        {
+          "value": "ta-left",
+          "label": "t:general.settings.option_left.label"
+        },
+        {
+          "value": "ta-center m-auto",
+          "label": "t:general.settings.option_center.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_image.content"
+    },
+    {
+      "type": "image_picker",
+      "label": "t:general.settings.background_image.label",
+      "id": "image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.name"
+    }
+  ]
+}
+{% endschema %}

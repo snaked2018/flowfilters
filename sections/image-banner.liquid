@@ -1,0 +1,269 @@
+{%- liquid
+  assign desktop_background_image = 'lifestyle-1' | placeholder_svg_tag: 'placeholder d-none d-block-sm w-100 h-100 of-cover'
+  assign mobile_background_image = 'lifestyle-1' | placeholder_svg_tag: 'placeholder d-none-sm d-block w-100 h-100 of-cover'
+
+  assign desktop_background_image_alt  = section.settings.desktop_background_image.alt | default: section.settings.desktop_background_image.image | split: '/' | last
+  assign desktop_background_image = section.settings.desktop_background_image | image_url: width: section.settings.desktop_background_image.width | image_tag: widths: '750, 950, 1024, 1200, 1400, 1600, 1800, 2000', sizes: "(min-width: 361px) calc(100vw/2), calc(100vw/3)", alt: desktop_background_image_alt, class: 'd-none d-block-sm w-100 h-100 of-cover'
+
+  assign mobile_background_image_alt  = section.settings.mobile_background_image.alt | default: section.settings.mobile_background_image.image | split: '/' | last
+  assign mobile_background_image = section.settings.mobile_background_image | image_url: width: section.settings.mobile_background_image.width | image_tag: widths: '750, 950', sizes: "(min-width: 361px) calc(100vw/2), calc(100vw/3)", alt: mobile_background_image_alt, class: 'd-none-sm d-block w-100 h-100 of-cover'
+
+  assign content_position = 'content_position'
+  if section.blocks[0].settings.content_position contains 'middle'
+    assign content_position = ''
+  endif
+  if section.blocks[0].settings.content_position contains 'top'
+    assign overlay_style = 'sht-mask--top'
+  elsif section.blocks[0].settings.content_position contains 'bottom'
+    assign overlay_style = 'sht-mask--bottom'
+  endif
+
+  assign style_image_height = section.settings.height | append: 'vh' | prepend: 'style="--mh-xs: 100vh; --mh-sm:' | append: '"'
+  assign image_banner_height = ''
+  assign style_ratio = ''
+
+  if section.settings.height == 'adapt_img'
+    assign style_image_height = ''
+    assign image_banner_height = 'image-banner-height'
+    assign image_ratio_md = section.settings.desktop_background_image.aspect_ratio
+    assign image_ratio = image_ratio_md
+    if section.settings.mobile_background_image
+      assign image_ratio = section.settings.mobile_background_image.aspect_ratio
+    endif
+
+    if section.settings.desktop_background_image == blank and section.settings.mobile_background_image == blank
+      assign style_image_height = 'style="--mh-xs: 500px;"'
+    endif
+
+    assign style_ratio = image_ratio | prepend: '--image-ratio:' | append: ';--image-ratio-md: ' | append: image_ratio_md | append: ';'
+  endif
+
+-%}
+<div class="ctnr" data-ui-component="Image Banner Section" role="region" aria-labelledby="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" style="{{ style_ratio }} --overlay: {{ section.settings.image_overlay_opacity }}">
+  <div class=" bs-card p-relative sht-mask corner-radius-lg {{ image_banner_height }} {{ section.settings.color_scheme }} {{ overlay_style }}" {{ style_image_height }}>
+    <div class="p-absolute w-100 h-100">
+      <div class="d-block w-100 h-100 js-animate anm anm-zoomOut media-wrapper">
+        {%- liquid
+          if section.settings.mobile_background_image
+              echo mobile_background_image | replace: "src=", 'data="mobile" loading="lazy" decoding="async" fetchpriority="low" src='
+              echo desktop_background_image | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
+          else
+            echo desktop_background_image | replace: 'd-none d-block-sm', '' | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
+          endif
+        -%}
+      </div>
+    </div>
+    <div class="s-card zi-1 w-100 h-100 p-relative d-flex {{ image_banner_height }} {{ section.blocks[0].settings.content_position }} {{ content_position }}" {{ style_image_height }}>
+      <div class="w-100" {{ section.blocks[0].shopify_attributes }}>
+        {% assign heading_style = section.settings.enable_large_heading | default: '' | replace: 'true', 'headline' %}
+        {% render 'section-header'
+          classes: 's-card__header',
+          content_align: section.blocks[0].settings.content_position,
+          subheading: section.blocks[0].settings.subheading,
+          heading: section.blocks[0].settings.heading,
+          heading_classes: heading_style,
+          description: section.blocks[0].settings.description,
+          button_main_text: section.blocks[0].settings.primary_button_label,
+          button_main_link: section.blocks[0].settings.primary_button_link,
+          button_sub_text: section.blocks[0].settings.secondary_button_label,
+          button_sub_link: section.blocks[0].settings.secondary_button_link,
+          section: section
+        %}
+      </div>
+    </div>
+  </div>
+  {%- render 'section-id', section: section -%}
+</div>
+{% schema %}
+{
+  "name": "t:sections.image_banner.name",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "range",
+      "unit": "%",
+      "max": 90,
+      "min": 0,
+      "step": 1,
+      "default": 30,
+      "id": "image_overlay_opacity",
+      "label": "t:general.settings.overlay_opacity.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:general.settings.color_scheme.label",
+      "info": "t:general.settings.color_scheme.info",
+      "default": "color-scheme-1",
+      "options": [
+        {
+          "value": "color-scheme-1",
+          "label": "t:general.settings.scheme_1.label"
+        },
+        {
+          "value": "color-scheme-2",
+          "label": "t:general.settings.scheme_2.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_large_heading",
+      "label": "t:general.settings.enable_large_heading.label",
+      "info": "t:general.settings.enable_large_heading.info",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_layout.content"
+    },
+    {
+      "type": "select",
+      "label": "t:general.settings.height.label",
+      "info": "t:sections.image_banner.settings.height.info",
+      "id": "height",
+      "options": [
+        {
+          "value": "70",
+          "label": "t:general.settings.height.options.option_70.label"
+        },
+        {
+          "value": "100",
+          "label": "t:general.settings.height.options.option_100.label"
+        },
+        {
+          "value": "adapt_img",
+          "label": "t:general.settings.image_ratio.options.option_adapt.label"
+        }
+      ],
+      "default": "70"
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_image.content"
+    },
+    {
+      "type": "image_picker",
+      "label": "t:general.settings.background_image.label",
+      "id": "desktop_background_image",
+      "info": "t:general.settings.background_image.info"
+    },
+    {
+      "type": "image_picker",
+      "label": "t:general.settings.mobile_background_image.label",
+      "id": "mobile_background_image",
+      "info": "t:general.settings.mobile_background_image.info"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "t:general.settings.headers.header_content.content",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "label": "t:general.settings.content_position.label",
+          "id": "content_position",
+          "options": [
+            {
+              "value": "start-xs top-xs ta-left",
+              "label": "t:general.settings.content_position.options.option_top_left.label"
+            },
+            {
+              "value": "center-xs top-xs ta-center",
+              "label": "t:general.settings.content_position.options.option_top_center.label"
+            },
+            {
+              "value": "start-xs middle-xs ta-left",
+              "label": "t:general.settings.content_position.options.option_middle_left.label"
+            },
+            {
+              "value": "center-xs middle-xs ta-center",
+              "label": "t:general.settings.content_position.options.option_middle_center.label"
+            },
+            {
+              "value": "start-xs bottom-xs ta-left",
+              "label": "t:general.settings.content_position.options.option_bottom_left.label"
+            },
+            {
+              "value": "center-xs bottom-xs ta-center",
+              "label": "t:general.settings.content_position.options.option_bottom_center.label"
+            }
+          ],
+          "default": "center-xs middle-xs ta-center"
+        },
+        {
+          "type": "header",
+          "content": "t:general.settings.headers.header_text.content"
+        },
+        {
+          "type": "text",
+          "label": "t:general.settings.subheading.label",
+          "id": "subheading",
+          "default": "Banner title"
+        },
+        {
+          "type": "text",
+          "label": "t:general.settings.heading.label",
+          "id": "heading",
+          "default": "Welcome to our store"
+        },
+        {
+          "type": "richtext",
+          "label": "t:general.settings.description.label",
+          "id": "description",
+          "default": "<p>Use this text to share brand information with your customers. Introduce a new product, announce an announcement or welcome customers.</p>"
+        },
+        {
+          "type": "header",
+          "content": "t:general.settings.headers.header_buttons.content"
+        },
+        {
+          "type": "text",
+          "id": "primary_button_label",
+          "label": "t:general.settings.primary_button_label.label",
+          "info": "t:general.settings.button_label.info",
+          "default": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "primary_button_link",
+          "label": "t:general.settings.primary_button_link.label"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_label",
+          "label": "t:general.settings.secondary_button_label.label",
+          "info": "t:general.settings.button_label.info",
+          "default": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "t:general.settings.secondary_button_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image_banner.name",
+      "blocks": [
+        {
+          "type": "content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

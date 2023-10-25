@@ -1,0 +1,42 @@
+{% liquid
+  if section.settings.show_page_title == false
+    assign content_style = 'pt-0'
+  endif
+%}
+<div class="ctnr {% if section.settings.show_page_title == false and section.settings.show_page_content == false or page.content == blank %}pt-0 pb-0{% endif %}" data-ui-component="Main Page Section">
+  <div class="m-auto js-animate anm anm-fadeInUpSmall" style="--w-md:10; --duration: .7s">
+    {% if section.settings.show_page_title %}
+      <div class="s-header ta-center pb-0">
+        <h1 class="h2 m-zero tt-cap">{{- page.title | escape -}}</h1>
+      </div>
+    {% endif %}
+    {% if section.settings.show_page_content %}
+      <div class="s-footer-sm rte hide-empty {{ content_style }}">
+        {{- page.content -}}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.main_page.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_page_title",
+      "label": "t:sections.main_page.settings.show_page_title.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_page_content",
+      "label": "t:sections.main_page.settings.show_page_content.label",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

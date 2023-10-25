@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="{{ '404.css' | asset_url }}" media="all">
+{% liquid
+  assign image = section.settings.image
+  assign media_alt  = section.settings.image.alt | default: ssection.settings.image.image | split: '/' | last
+  assign media = image | image_url: width: section.settings.image.width | image_tag: widths: '750, 950, 1024, 1200, 1400, 1600, 1800, 2000', sizes: '(min-width: 361px) calc(100vw/2), calc(100vw/3)', alt: media_alt, class: 'w-100 h-100 of-cover media'
+  assign content_style = '--gc-xs:1/13;--gc-md:1/7;--gr-md:1'
+  assign form_align = 'm-zero-md'
+  assign content_class = 'ta-left-md'
+  assign description_extra_class = 'm-side'
+  if image == blank
+    assign content_style = '--gc-xs:1/13;--gc-md:1/13;--gr-md:1'
+    assign form_align = ''
+    assign content_class = ''
+    assign description_extra_class = 'm-sides'
+  endif
+%}
+<div class="ctnr section-404" data-ui-component="Main 404">
+  <div class="d-grid c-gap corner-radius-lg js-animate anm {{ section.settings.color_scheme }}" style="--gtc-equal:12; --duration: .6s">
+    {% if image %}
+      <div class="p-relative m-zero-md" style="--gc-xs:1/13;--gc-md:7/13;--mh-xs:30vh;--mh-md: 80vh">
+        {% render 'image', image_item: media, image_wrap_classes: 'h-100', image_classes: 'h-100 anm anm-zoomOut', media_style: '--duration: .7s;' %}
+      </div>
+    {% endif %}
+    <div class="s-card s-card--right h-100 d-flex fd-column center-xs ta-center {{ content_class }}" style="{{ content_style }}">
+      {% render 'section-header',
+        subheading: section.settings.subheading,
+        heading: section.settings.heading,
+        description: section.settings.description,
+        heading_classes: 'h1',
+        description_extra_class: description_extra_class,
+        section: section
+      %}
+      <div class="s-content anm anm-fadeInUpLarge anm-card" style="--duration: .7s;">
+        {% if section.settings.enable_search %}
+          <div class= "pb-24 p-relative w-100 m-0-auto {{ form_align }}" style="--mw-sm: 400px">
+            <form action="{{ routes.search_url }}">
+              <input
+                id="section404Input"
+                type="text"
+                placeholder="{{ 'general.search.search_the_site' | t }}"
+                name="q"
+                value="{{ search.terms | escape }}"
+                class="field__text field--focus field--hover w-100"
+              >
+              <label class="field__label visually-hidden" for="section404Input">{{ 'general.search.search' | t }}</label>
+              <button type="submit" aria-label="{{ "accessibility.search" | t }}" class="btn btn-icon btn-plain btn-large p-absolute zi-1 right-0 top-0">
+                {% render 'icon-search', size: 20, class: 'color-text' %}
+              </button>
+            </form>
+          </div>
+        {% endif %}
+      </div>
+      <div class="gap-12 d-flex fd-column hide-empty m-0-auto ta-center w-100 anm anm-fadeInUpLarge anm-card {{ form_align }}" style="--mw-sm: 400px; --duration: .7s;">
+          {%- if section.settings.home_page_link_text != blank -%}
+            <a href="{{- routes.root_url -}}" class="btn btn-large btn-secondary hide-empty c-gap-10">
+              {% render 'icon-home', size: 24 %}
+              <span class="flex-1 maw-fit-content">{{- section.settings.home_page_link_text -}}</span>
+            </a>
+          {%- endif -%}
+          {%- if section.settings.catalogue_link_text != blank -%}
+            <a href="{{- routes.all_products_collection_url -}}" class="btn btn-large btn-secondary hide-empty c-gap-10">
+              {% render 'icon-shop', size: 24 %}
+              <span class="flex-1 maw-fit-content">{{- section.settings.catalogue_link_text -}}</span>
+            </a>
+          {%- endif -%}
+        </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_404.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:general.settings.color_scheme.label",
+      "info": "t:general.settings.color_scheme.info",
+      "default": "background color-scheme-1",
+      "options": [
+        {
+          "value": "background color-scheme-1",
+          "label": "t:general.settings.scheme_1.label"
+        },
+        {
+          "value": "background color-scheme-2",
+          "label": "t:general.settings.scheme_2.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_text.content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:general.settings.subheading.label",
+      "default": "404—Page not found"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:general.settings.heading.label",
+      "default": "We're sorry, this page is not available"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:general.settings.description.label",
+      "default": "<p>The page URL might be outdated or contain typo errors</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_image.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:general.settings.image.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main_404.settings.headers.header_functions.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "t:sections.main_404.settings.enable_search.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "home_page_link_text",
+      "label": "t:sections.main_404.settings.home_page_link_text.label",
+      "info": "t:sections.main_404.settings.general.link_text.info",
+      "default": "Visit our homepage"
+    },
+    {
+      "type": "text",
+      "id": "catalogue_link_text",
+      "label": "t:sections.main_404.settings.catalogue_link_text.label",
+      "info": "t:sections.main_404.settings.general.link_text.info",
+      "default": "Browse all products"
+    }
+  ]
+}
+{% endschema %}

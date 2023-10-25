@@ -1,0 +1,271 @@
+{%- liquid
+  assign images = ''
+  assign placeholder =  'lifestyle-1' | placeholder_svg_tag: 'placeholder media of-contain h-100 w-100'
+  assign time_run = section.blocks.size | times: section.settings.speed
+  assign heading_style = section.settings.enable_large_heading | default: '' | replace: 'true', 'headline'
+
+  assign content_position = 'content_position'
+  if section.settings.content_position contains 'middle'
+    assign content_position = ''
+  endif
+  if section.settings.content_position contains 'top'
+    assign overlay_style = 'sht-mask--top'
+  elsif section.settings.content_position contains 'bottom'
+    assign overlay_style = 'sht-mask--bottom'
+  endif
+-%}
+<div class="ctnr" data-ui-component="Moving Image Banner Section">
+  <sht-moving-image>
+    <div class="sht-mask p-relative corner-radius-lg bs-card js-moving-image-container {{ section.settings.color_scheme }} {{ overlay_style }}" style="--mh-xs:100vh;--mh-sm:{{ section.settings.height }}vh; --overlay: {{ section.settings.image_overlay_opacity }}">
+      <div class="fw-nowrap w-100 p-absolute d-flex h-100" style="--time-run: {{ time_run }}s;">
+        {%-liquid
+        for block in section.blocks
+            case block.type
+              when 'image'
+                assign media = placeholder
+                assign media_alt = block.settings.background_image.alt | default: block.settings.background_image.image | split: '/' | last
+                assign media = block.settings.background_image | image_url: width: block.settings.background_image.width | image_tag: widths: '750, 950, 1024, 1200', sizes: '(min-width: 361px) calc(100vw/2), calc(100vw/3)', alt: media_alt, class: 'media of-contain w-100 h-100'
+                assign ratio = block.settings.background_image.aspect_ratio
+                assign media_style = ''
+                if block.settings.background_image == blank
+                  assign ratio = 1
+                  assign media_style = 'w-100'
+                endif
+                capture images
+                  echo images
+                  echo '<div class="moving-image media-wrapper media_style h-100" style="--ratio: ratio_image ">' | replace: 'ratio_image', ratio | replace: 'media_style', media_style
+                  echo   media | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
+                  echo '</div>'
+                endcapture
+            endcase
+          endfor
+        -%}
+        {% if images != '' %}
+          <div class="moving-image-inner d-flex fw-nowrap">
+            {{ images }}
+          </div>
+          <div class="moving-image-inner d-flex fw-nowrap">
+            {{ images }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="s-card zi-1 w-100 h-100 p-relative d-flex {{ section.settings.content_position }} {{ content_position }}" style="--mh-xs:100vh;--mh-sm:{{ section.settings.height }}vh">
+        {% render 'section-header'
+          classes: 's-card__header',
+          content_align: section.settings.content_position,
+          subheading: section.settings.subheading,
+          heading: section.settings.heading,
+          heading_classes: heading_style,
+          description: section.settings.description,
+          button_main_text: section.settings.primary_button_label,
+          button_main_link: section.settings.primary_button_link,
+          button_sub_text: section.settings.secondary_button_label,
+          button_sub_link: section.settings.secondary_button_link,
+          section: section
+        %}
+      </div>
+    </div>
+  </sht-moving-image>
+  {%- render 'section-id', section: section -%}
+</div>
+{% schema %}
+{
+  "name": "t:sections.moving_image_banner.name",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "range",
+      "unit": "%",
+      "max": 90,
+      "min": 0,
+      "step": 1,
+      "default": 30,
+      "id": "image_overlay_opacity",
+      "label": "t:general.settings.overlay_opacity.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:general.settings.color_scheme.label",
+      "info": "t:general.settings.color_scheme.info",
+      "default": "color-scheme-1",
+      "options": [
+        {
+          "value": "color-scheme-1",
+          "label": "t:general.settings.scheme_1.label"
+        },
+        {
+          "value": "color-scheme-2",
+          "label": "t:general.settings.scheme_2.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "speed",
+      "label": "Speed",
+      "default": "10",
+      "options": [
+        {
+          "value": "10",
+          "label": "Slow"
+        },
+        {
+          "value": "7",
+          "label": "Normal"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_large_heading",
+      "label": "t:general.settings.enable_large_heading.label",
+      "info": "t:general.settings.enable_large_heading.info",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_layout.content"
+    },
+    {
+      "type": "select",
+      "label": "t:general.settings.height.label",
+      "info": "t:general.settings.height.info",
+      "id": "height",
+      "options": [
+        {
+          "value": "70",
+          "label": "t:general.settings.height.options.option_70.label"
+        },
+        {
+          "value": "100",
+          "label": "t:general.settings.height.options.option_100.label"
+        }
+      ],
+      "default": "70"
+    },
+    {
+      "type": "select",
+      "label": "t:general.settings.content_position.label",
+      "id": "content_position",
+      "options": [
+        {
+          "value": "start-xs top-xs ta-left",
+          "label": "t:general.settings.content_position.options.option_top_left.label"
+        },
+        {
+          "value": "center-xs top-xs ta-center",
+          "label": "t:general.settings.content_position.options.option_top_center.label"
+        },
+        {
+          "value": "start-xs middle-xs ta-left",
+          "label": "t:general.settings.content_position.options.option_middle_left.label"
+        },
+        {
+          "value": "center-xs middle-xs ta-center",
+          "label": "t:general.settings.content_position.options.option_middle_center.label"
+        },
+        {
+          "value": "start-xs bottom-xs ta-left",
+          "label": "t:general.settings.content_position.options.option_bottom_left.label"
+        },
+        {
+          "value": "center-xs bottom-xs ta-center",
+          "label": "t:general.settings.content_position.options.option_bottom_center.label"
+        }
+      ],
+      "default": "center-xs middle-xs ta-center"
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_text.content"
+    },
+    {
+      "type": "text",
+      "label": "t:general.settings.subheading.label",
+      "id": "subheading",
+      "default": "Banner title"
+    },
+    {
+      "type": "text",
+      "label": "t:general.settings.heading.label",
+      "id": "heading",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "richtext",
+      "label": "t:general.settings.description.label",
+      "id": "description"
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_buttons.content"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "t:general.settings.primary_button_label.label",
+      "info": "t:general.settings.button_label.info",
+      "default": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "t:general.settings.primary_button_link.label"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "t:general.settings.secondary_button_label.label",
+      "info": "t:general.settings.button_label.info",
+      "default": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "t:general.settings.secondary_button_link.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "t:general.settings.headers.header_image.content",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "t:general.settings.background_image.label",
+          "info": "t:sections.moving_image_banner.settings.background_image.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.moving_image_banner.name",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,78 @@
+{% liquid
+  assign sizes = '(min-width: 361px) calc(100vw - (var(--gutter-container) * 2))'
+  assign collection_media = collection.image.src | image_url: width: collection.image.width | image_tag: widths: '750, 950, 1024, 1200', sizes: sizes, alt: collection.title, class: 'media h-100 w-100 of-cover'
+%}
+{%- if section.settings.show_collection_image and collection.image -%}
+  {% assign section_style ='style="--mh-xs: 40vh;--mh-sm:30vh;--mh-md:50vh"' %}
+  {% capture collection_image %}
+    <div class="p-absolute w-100 h-100 left-0 sht-mask" style="--overlay: {{ section.settings.image_overlay_opacity }}">
+      {% render 'image', image_item: collection_media, image_wrap_classes: 'h-100', image_classes: 'h-100 js-animate anm anm-zoomOut' %}
+    </div>
+  {% endcapture %}
+{%- endif -%}
+
+{%- if section.settings.show_description and collection.description != blank -%}
+  {% capture description %}
+    <div class="s-header__desc m-sides text-block js-animate anm anm-fadeInUpSmall" style="--duration: .7s; --delay: .05s">{{- collection.description -}}</div>
+  {% endcapture %}
+{%- endif -%}
+<div class="ctnr" data-ui-component="Main Collection Header">
+  <div class="s-card card--content-inner d-flex middle-xs p-relative {{ section.settings.color_scheme }}" {{ section_style }}>
+    {{ collection_image }}
+    <div class="s-header w-100 p-relative zi-2 ta-center pb-0">
+      <h1 class="h2 m-zero tt-cap js-animate anm anm-fadeInUpSmall" style="--duration: .6s;">{{- collection.title | escape -}}</h1>
+      {{ description }}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.collection_header.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "range",
+      "unit": "%",
+      "max": 90,
+      "min": 0,
+      "step": 1,
+      "default": 30,
+      "id": "image_overlay_opacity",
+      "label": "t:general.settings.overlay_opacity.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:general.settings.color_scheme.label",
+      "info": "t:general.settings.color_scheme.info",
+      "default": "color-scheme-1 background",
+      "options": [
+        {
+          "value": "color-scheme-1 background",
+          "label": "t:general.settings.scheme_1.label"
+        },
+        {
+          "value": "color-scheme-2 background",
+          "label": "t:general.settings.scheme_2.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "label": "t:sections.collection_header.settings.show_collection_image.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "t:sections.collection_header.settings.show_description.label",
+      "info": "t:sections.collection_header.settings.show_description.info",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

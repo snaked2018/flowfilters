@@ -1,0 +1,59 @@
+{% comment %}
+  Renders section header
+
+  Accepts:
+  - subheading: {String} Section subheading.
+  - heading: {String} Section heading.
+  - description: {String} Section description.
+  - content_align: {String} Header text alignment. Value is "ta-center" for center, left is empty.
+  - button_main_text: {String} Button primary text.
+  - button_main_link: {String} Button primary link.
+  - button_sub_text: {String} Button secondary text.
+  - button_sub_link: {String} Button secondary link.
+
+  Example usage:
+  {% render 'section-header',
+    content_align: section.settings.content_alignment,
+    subheading: section.settings.subheading,
+    heading: section.settings.heading,
+    description: section.settings.description,
+    button_main_text: section.settings.button_main_text,
+    button_main_link: section.settings.button_main_link,
+    button_sub_text: section.settings.button_sub_text,
+    button_sub_link: section.settings.button_sub_link,
+  %}
+{% endcomment %}
+{%- liquid
+  assign classes = classes | default: 's-header'
+  assign content_align = content_align
+
+  if content_align contains 'ta-center'
+    assign content_align_class = ' clm ta-center m-auto p-zero'
+    assign description_class = ' m-sides'
+  elsif content_align contains 'ta-left'
+    assign content_align_class = ' clm p-zero'
+  else
+    assign description_class = ' '
+  endif
+-%}
+{%- unless subheading == blank and heading == blank and description == blank -%}
+  <div class="{{ classes }}" {% if content_align contains 'ta-' or header_style %}style="{{ header_style }}"{% endif %}>
+    <div class="s-header__content{{ content_align_class }} wb-break-word">
+      <div class="s-header__sub h6 hide-empty d-inline-block fw-700 tt-up js-animate anm anm-fadeInUpSmall" style="--duration: .6s;">{{- subheading | escape -}}</div>
+      <h2 id="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" class="s-header__title mb-0 wb-break-word hide-empty {{ heading_classes }} js-animate anm anm-fadeInUpSmall" style="--duration: .6s;">{{- heading | escape -}}</h2>
+      <div class="s-header-content hide-empty js-animate anm anm-fadeInUpSmall" style="--duration: .7s; --delay: .05s">
+        {% if description -%}
+          <div class="s-header__desc text-block hide-empty {{ description_class }} {{ description_extra_class }}">{{- description -}}</div>
+        {%- endif %}
+        <div class="s-header__buttons d-inline-flex gap-12 fw-wrap hide-empty {{ btn_position }} {% if content_align contains 'ta-center' %}center-xs{% endif %}">
+          {%- if button_main_text != blank -%}
+            <a class="btn btn-large btn-primary" href="{{- button_main_link | default: '#' -}}">{{- button_main_text | escape -}}</a>
+          {%- endif -%}
+          {%- if button_sub_text != blank -%}
+            <a class="btn btn-large btn-link" href="{{- button_sub_link | default: '#' -}}">{{- button_sub_text | escape -}}</a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endunless -%}

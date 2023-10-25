@@ -1,0 +1,25 @@
+{%- comment -%}
+{% render 'card-collection',
+  collection: collection,
+  media_ratio: '1/1'
+  show_product_count: settings.show_product_count
+%}
+{%- endcomment -%}
+{%- liquid
+  assign collection_image = 'collection-1' | placeholder_svg_tag: 'placeholder media of-cover w-100'
+  assign collection_image = collection.products.first.featured_image | image_url: width: section.settings.hero_image.width | image_tag: widths: '750, 950', sizes: '(min-width: 361px) calc(100vw/2), calc(100vw/3)', alt: collection.title, class: 'media of-cover w-100'
+  assign collection_image = collection.image | image_url: width: section.settings.hero_image.width | image_tag: widths: '750, 950', sizes: '(min-width: 361px) calc(100vw/2), calc(100vw/3)', alt: collection.title, class: 'media of-cover w-100'
+-%}
+<div class="card card-collection card--content-inner w-100 p-relative mah-100 sht-mask sht-mask--bottom h-100 {{ settings.collection_card_color_scheme }}" style="--overlay: {{ settings.card_collection_overlay }}">
+  <div class="card__media p-relative">
+    <a aria-label="{{ collection.title }}" href="{{ collection.url }}" class="d-block h-100 w-100 zi-1 p-absolute"></a>
+    {% render 'image', image_item: collection_image, src: collection_image.src, ratio: media_ratio, image_wrap_classes: 'h-100', image_classes: 'h-100 w-100' %}
+  </div>
+  {% if settings.enable_prominent_badges %}
+    {% render 'collection-prominent-badge', collection: collection %}
+  {% endif %}
+  <div class="card__content card__content--inner p-absolute bottom-0 w-100 zi-1 pe-none wb-break-word">
+    <h3 class="h5 m-zero card__heading">{{ collection.title }}</h3>
+    <span class="card-collection__btn wb-break-word mt-4 btn btn-link btn-small {{ show_product_count | default: ' d-none-important' | replace: 'true', '' }}">{{ 'general.collection.view_collection' | t: count: collection.products.size }}</span>
+  </div>
+</div>

@@ -1,0 +1,233 @@
+{%- if section.settings.show_popup -%}
+  {%- unless section.settings.show_only_on_index and template != 'index' -%}
+    {%- unless section.settings.show_only_for_visitors and customer -%}
+      {%- liquid
+        assign media_alt = section.settings.image.alt | default: section.settings.image.image | split: '/' | last
+        assign media_image = section.settings.image | image_url: width: section.settings.image.width | image_tag: widths: '750, 950', sizes: '(min-width: 361px) calc(100vw/2), calc(100vw/3)', class: 'w-100 h-100 of-cover js-image-lazy media' , alt: media_alt
+        assign popup_sticky_position = section.settings.popup_position | replace: '--', '-sticky--'
+        assign section_id = section.id | md5 | truncate: 12, ""
+        assign frm_id = section_id | prepend: 'newsletterPopupForm-'
+      -%}
+      <div class="section-popup p-fixed zi-8 hidden-xs {{ section.settings.popup_position }} {{ section.settings.color_scheme }} corner-radius-lg">
+        <sht-popup class="popup w-100 d-block p-relative zi-6 no-js-hidden no-focus-visible" data-props='{"triggerOn":"{{ section.settings.trigger }}", "showSticky": {{ section.settings.enable_sticky_popup }}}' tabindex="-1" data-ui-component="Popup Section">
+          <button class="btn-popup--close zi-1 btn btn-large btn-icon icon btn-secondary js-popup-close-btn" type="button" data-dismiss="modal" aria-label="{{ 'accessibility.close_popup' | t }}">
+            {%- render 'icon-close' -%}
+          </button>
+          {% if section.settings.image %}
+            {% render 'image', image_item: media_image, image_wrap_classes: 'popup-image', ratio: '16/9' %}
+          {% endif %}
+          {% liquid
+            assign subheading = section.settings.subheading
+            assign heading = section.settings.heading
+          %}
+          <div class="p-20 popup-content">
+            <div class="pb-0">
+              <div class="s-header__content wb-break-word">
+                <div class="s-header__sub h6 hide-empty d-inline-block fw-700 tt-up " >{{- subheading | escape -}}</div>
+                <h2 id="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" class="s-header__title mb-0 wb-break-word hide-empty h4 " >{{- heading | escape -}}</h2>
+                <div class="s-header-content hide-empty">
+                  {% if section.settings.text -%}
+                    <div class="s-header__desc text-block hide-empty popup__description">{{- section.settings.text -}}</div>
+                  {%- endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="s-footer-xs">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'button' -%}
+                      <a target="_blank" href="{{ block.settings.button_link | default: '#' }}" class="btn btn-primary btn-large w-100 hide-no-link hide-empty" {{ block.shopify_attributes }}>{{- block.settings.button_title | escape -}}</a>
+                  {%- when 'newsletter' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'newsletter-form', form_name: 'contactPopup', form_id: frm_id, classes: 'fd-column-sm gap-1x' -%}
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </sht-popup>
+      </div>
+      {% if section.settings.enable_sticky_popup and section.settings.sticky_label != blank %}
+        <sht-sticky-popup class="popup-sticky zi-2 popup-sticky-hide p-fixed  gap-1x corner-radius-lg {{ popup_sticky_position }} {{ section.settings.color_scheme }}">
+          <button class="button-reopen-popup js-sticky-popup-reopen-btn btn-plain h5 m-zero p-zero ta-left  c-pointer pl-20 pr-20 pt-12 pb-12">{{ section.settings.sticky_label }}</button>
+          <button class="button-close-sticky-popup btn btn-small btn-secondary btn-icon icon js-sticky-popup-close-btn" type="button" data-dismiss="modal" aria-label="{{ 'accessibility.close_popup' | t }}">
+            {%- render 'icon-close' -%}
+          </button>
+        </sht-sticky-popup>
+      {% endif %}
+    {%- endunless -%}
+  {%- endunless -%}
+{%- endif -%}
+{% schema %}
+{
+  "name": "t:sections.popup.name",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_popup",
+      "label": "t:sections.popup.settings.enable_popup.label",
+      "info": "t:sections.popup.settings.enable_popup.info",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "popup_position",
+      "label": "t:sections.popup.settings.popup_position.label",
+      "options": [
+        {
+          "value": "popup--left",
+          "label": "t:sections.popup.settings.popup_position.options.option_left.label"
+        },
+        {
+          "value": "popup--right",
+          "label": "t:sections.popup.settings.popup_position.options.option_right.label"
+        }
+      ],
+      "default": "popup--right"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:general.settings.color_scheme.label",
+      "info": "t:general.settings.color_scheme.info",
+      "default": "color-scheme-1 background",
+      "options": [
+        {
+          "value": "color-scheme-1 background",
+          "label": "t:general.settings.scheme_1.label"
+        },
+        {
+          "value": "color-scheme-2 background",
+          "label": "t:general.settings.scheme_2.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_image.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:general.settings.image.label",
+      "info": "t:sections.popup.settings.popup_image_recoments.info"
+    },
+    {
+      "type": "header",
+      "content": "t:general.settings.headers.header_text.content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:general.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:general.settings.heading.label",
+      "default": "Subscribe"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:general.settings.description.label",
+      "default": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.popup.settings.headers.header_sticky.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_popup",
+      "label": "t:sections.popup.settings.enable_sticky.label",
+      "info": "t:sections.popup.settings.enable_sticky.info"
+    },
+    {
+      "type": "text",
+      "id": "sticky_label",
+      "label": "t:sections.popup.settings.sticky_label.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.popup.settings.headers.header_trigger.content"
+    },
+    {
+      "type": "select",
+      "id": "trigger",
+      "label": "t:sections.popup.settings.when_to_show.label",
+      "options": [
+        {
+          "value": "reaching-to-footer",
+          "label": "t:sections.popup.settings.when_to_show.options.option_reaching_the_footer.label"
+        },
+        {
+          "value": "after-closing-cart-notification",
+          "label": "t:sections.popup.settings.when_to_show.options.option_after_add_to_cart.label"
+        }
+      ],
+      "default": "reaching-to-footer",
+      "info": "t:sections.popup.settings.when_to_show.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_on_index",
+      "label": "t:sections.popup.settings.show_only_on_home_page.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_for_visitors",
+      "label": "t:sections.popup.settings.show_only_for_non_login_visitors.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "t:sections.popup.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_title",
+          "label": "t:general.settings.button_text.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:general.settings.button_link.label"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "t:sections.popup.blocks.newsletter.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.popup.blocks.newsletter.settings.paragraph_one.content"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.popup.blocks.newsletter.settings.paragraph_two.content"
+        }
+      ],
+      "limit": 1
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "newsletter"
+      }
+    ]
+  }
+}
+{% endschema %}
