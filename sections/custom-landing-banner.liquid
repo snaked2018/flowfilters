@@ -18,6 +18,7 @@
       {% render 'image', image_item: media_image, image_wrap_classes: 'h-100', image_classes: 'h-100 js-animate anm anm-zoomOut' %}
     </div>
   {% endcapture %}
+  {% if section.settings.image != blank %}{% endif %}
 {% endif %}
 <div class="ctnr" role="region" aria-labelledby="sectionHeading-{{ section_id }}" data-ui-component="Newsletter Section">
   <div class="bs-card corner-radius-lg {{ section_class }} {{ section.settings.color_scheme }}" {{ section_style }}>
@@ -78,6 +79,11 @@
           "label": "t:general.settings.scheme_2.label"
         }
       ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.your-section.settings.image.label"
     },
     {
       "type": "text",
