@@ -1,3 +1,4 @@
+{{ 'logo_image.png' | asset_img_url: '300x' }}
 {%- liquid
   assign classes = 's-header pb-0'
   assign content_align = section.settings.content_alignment
@@ -18,7 +19,7 @@
       {% render 'image', image_item: media_image, image_wrap_classes: 'h-100', image_classes: 'h-100 js-animate anm anm-zoomOut' %}
     </div>
   {% endcapture %}
-  {{ 'logo_image.png' | asset_img_url: '300x' }}"
+  
 {% endif %}
 <div class="ctnr" role="region" aria-labelledby="sectionHeading-{{ section_id }}" data-ui-component="Newsletter Section">
   <div class="bs-card corner-radius-lg {{ section_class }} {{ section.settings.color_scheme }}" {{ section_style }}>
