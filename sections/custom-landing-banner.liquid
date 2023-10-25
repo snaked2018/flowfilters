@@ -1,4 +1,4 @@
-{{ 'logo_image.png' | asset_img_url }}
+<img src="{{ 'logo_image.png' | asset_img_url: '300x' }}" alt="">
 {%- liquid
   assign classes = 's-header pb-0'
   assign content_align = section.settings.content_alignment
