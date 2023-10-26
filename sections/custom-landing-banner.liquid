@@ -1,5 +1,9 @@
 {%- liquid
 
+  capture logo
+  render 'header-logo', class: 'm-0'
+  endcapture
+
   assign desktop_image = 'image' | placeholder_svg_tag: 'placeholder media media-md d-none d-block-md w-100 h-100 of-cover'
   assign mobile_image = 'image' | placeholder_svg_tag: 'placeholder media d-none-md d-block w-100 h-100 of-cover'
 
@@ -23,6 +27,12 @@
 <div class="ctnr" data-ui-component="Image With Text Section" role="region" aria-labelledby="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}">
   <div class="d-grid bs-card c-gap middle-xs corner-radius-lg js-animate anm {{ section.settings.color_scheme }}" style="--gtc-equal:12;--mh-md:{{ section.settings.height }}vh; --duration: .6s">
     <div class="s-card h-100 d-flex fd-column center-xs {{ s_card_postion }}" style="{{ content_style }}">
+      {% style %}
+        .logo__width {
+          --logo-width-desktop: {{ section.settings.logo_width | append: 'px' }};
+          --logo-width-mobile: {{ section.settings.logo_width_mobile | append: 'px' }};
+        }
+        {% endstyle %}
       <div class="s-header">
         <div class="s-header__sub h6 hide-empty d-inline-block fw-700 tt-up anm anm-fadeInUpSmall" style="--duration: .6s;" >{{- section.settings.subheading | escape -}}</div>
         <h2 id="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" class="s-header__title mb-0 hide-empty anm anm-fadeInUpSmall {{ heading_style }}" style="--duration: .6s;">{{- section.settings.heading | escape -}}</h2>
