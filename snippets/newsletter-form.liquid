@@ -9,7 +9,7 @@ Usage:
 {%- form 'customer', id: form_id -%}
   <input type="hidden" name="contact[tags]" value="newsletter">
   <div class="d-flex fd-column fd-row-sm gap-16 {{ classes }}" style="">
-    <input type="text" name="contact[name]" placeholder="First Name" id="Name-{{ section_id }}" class="newsletter__input field__text field--focus field--hover w-50" required>
+    <input type="text" name="contact[name]" placeholder="First Name" id="Name-{{ section_id }}" class="newsletter__input field__text field--focus field--hover" required>
     <input id="newsletterForm--{{ form_id }}" type="email" name="contact[email]" class="newsletter__input field__text field--focus field--hover w-100" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" {% if form.errors %} autofocus aria-invalid="true" aria-describedby="{{ form_name }}-error" {% elsif form.posted_successfully? %} aria-describedby="{{ form_name }}-success"{% endif %} placeholder="{{ 'general.newsletter.email_placeholder' | t }}" required>
     <label hidden class="field__label" for="newsletterForm--{{ form_id }}">{{ 'general.newsletter.label' | t }}</label>
     <button type="submit" class="btn btn-primary btn-large fs-0" name="commit" id="subscribe-{{ form_id }}" aria-label="{{ 'general.newsletter.button_label' | t }}">
