@@ -60,6 +60,22 @@
   </div>
   {%- render 'section-id', section: section -%}
 </div>
+<div class="bs-card corner-radius-lg {{ section_class }} {{ section.settings.color_scheme }}" {{ section_style }}>
+    {{ newsletter_image }}
+    <div class="s-card zi-1 w-100 middle-xs">
+      {% render 'section-header',
+        classes: classes,
+        subheading: section.settings.subheading,
+        heading: section.settings.heading,
+        description: section.settings.description,
+        content_align: content_align,
+        section: section
+      %}
+      <div class="s-footer-sm {{ newsletter_form_class }} clm p-zero js-animate anm anm-fadeInUpLarge {{ content_align }}" style="--w-md:6; --duration: .7s; --delay: .15s;">
+        {% render 'newsletter-form', form_id: frm_id , form_name: 'newsletterForm', content_align: content_align %}
+      </div>
+    </div>
+  </div>
 {% schema %}
 {
   "name": "Custom Landing Banner",
