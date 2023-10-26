@@ -44,6 +44,22 @@
         {%- endif -%}
       </div>
     </div>
+
+    <div id="newsletter-signup">
+  <form action="/contact#contact_form" method="post" id="contact_form" accept-charset="UTF-8">
+    <input type="hidden" name="form_type" value="customer">
+    <input type="hidden" name="utf8" value="✓">
+    
+    <label for="contact_form_name">Name</label>
+    <input type="text" id="contact_form_name" name="contact[name]" required>
+    
+    <label for="contact_form_email">Email</label>
+    <input type="email" id="contact_form_email" name="contact[email]" required>
+    
+    <input type="submit" value="Subscribe">
+  </form>
+
+</div>
     <div class="h-100 w-100 p-relative o-hidden" style="{{ first_image_style }}; --ratio: {{ section.settings.image_ratio }};--ratio-md: 1/1;">
       <div class="h-100 w-100 media-wrapper anm anm-zoomOut anm-card" style="--duration: .7s;">
         {%- liquid
