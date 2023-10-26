@@ -1,5 +1,4 @@
 {%- liquid
-
   assign desktop_image = 'image' | placeholder_svg_tag: 'placeholder media media-md d-none d-block-md w-100 h-100 of-cover'
   assign mobile_image = 'image' | placeholder_svg_tag: 'placeholder media d-none-md d-block w-100 h-100 of-cover'
 
@@ -21,6 +20,10 @@
   endif
 -%}
 <div class="ctnr" data-ui-component="Image With Text Section" role="region" aria-labelledby="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}">
+  <div>
+    <img src="https://cdn.shopify.com/s/files/1/0837/5923/5354/files/Color_logo_-_no_background.png?v=1698037889" alt="">
+  </div>
+
   <div class="d-grid bs-card c-gap middle-xs corner-radius-lg js-animate anm {{ section.settings.color_scheme }}" style="--gtc-equal:12;--mh-md:{{ section.settings.height }}vh; --duration: .6s">
     <div class="s-card h-100 d-flex fd-column center-xs {{ s_card_postion }}" style="{{ content_style }}">
 
