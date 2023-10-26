@@ -1,5 +1,5 @@
 {%- liquid
-
+  {{ section.settings.image_with_text_image }}
   assign desktop_image = 'image' | placeholder_svg_tag: 'placeholder media media-md d-none d-block-md w-100 h-100 of-cover'
   assign mobile_image = 'image' | placeholder_svg_tag: 'placeholder media d-none-md d-block w-100 h-100 of-cover'
 
@@ -79,6 +79,11 @@
     {
       "type": "header",
       "content": "t:general.settings.headers.header_general.content"
+    },
+    {
+    "type": "image_picker",
+    "id": "image_with_text_image",
+    "label": "Image"
     },
     {
       "type": "select",
