@@ -38,13 +38,14 @@
       <div class="{% if section.blocks.size != 0 %} s-footer anm anm-fadeInUpLarge anm-card {% endif %} d-inline-flex gap-12 fw-wrap hide-empty" style="--duration: .7s;">
         {%- if section.settings.primary_button_label != blank -%}
           <a class="btn btn-large btn-primary hide-empty" href="{{- section.settings.primary_button_link | default: '#' -}}">{{- section.settings.primary_button_label | escape -}}</a>
+          
         {%- endif -%}
         {%- if section.settings.secondary_button_label != blank -%}
           <a class="btn btn-large btn-secondary hide-empty" href="{{- section.settings.secondary_button_link | default: '#' -}}">{{- section.settings.secondary_button_label | escape -}}</a>
-          <div class="s-footer-sm {{ newsletter_form_class }} clm p-zero js-animate anm anm-fadeInUpLarge {{ content_align }}" style="--w-md:6; --duration: .7s; --delay: .15s;">
-        {% render 'newsletter-form', form_id: frm_id , form_name: 'newsletterForm', content_align: content_align %}
-      </div>
         {%- endif -%}
+      </div>
+      <div class="s-footer-sm {{ newsletter_form_class }} clm p-zero js-animate anm anm-fadeInUpLarge {{ content_align }}" style="--w-md:6; --duration: .7s; --delay: .15s;">
+        {% render 'newsletter-form', form_id: frm_id , form_name: 'newsletterForm', content_align: content_align %}
       </div>
     </div>
   
