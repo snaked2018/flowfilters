@@ -4,6 +4,9 @@
   render 'header-logo', class: 'm-0-auto'
   endcapture
 
+  {{ section.settings.logo_width_mobile | append: 'px' }}
+  {{ section.settings.logo_width | append: 'px' }}
+  
   {{ 'password.css' | asset_url | stylesheet_tag: preload: true }}
   {% style %}
   .logo__width {
