@@ -1,19 +1,6 @@
 {%- liquid
+  {{ section.settings.image_with_text_image | image_url: width: 1500 | image_tag }}
 
-  capture logo
-  render 'header-logo', class: 'm-0-auto'
-  endcapture
-
-  {{ section.settings.logo_width_mobile | append: 'px' }}
-  {{ section.settings.logo_width | append: 'px' }}
-  
-  {{ 'password.css' | asset_url | stylesheet_tag: preload: true }}
-  {% style %}
-  .logo__width {
-    --logo-width-desktop: {{ section.settings.logo_width | append: 'px' }};
-    --logo-width-mobile: {{ section.settings.logo_width_mobile | append: 'px' }};
-  }
-  {% endstyle %}
 
   assign desktop_image = 'image' | placeholder_svg_tag: 'placeholder media media-md d-none d-block-md w-100 h-100 of-cover'
   assign mobile_image = 'image' | placeholder_svg_tag: 'placeholder media d-none-md d-block w-100 h-100 of-cover'
@@ -96,30 +83,9 @@
       "content": "t:general.settings.headers.header_general.content"
     },
     {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "t:general.settings.image.label",
-      "info": "t:general.settings.logo_image.info"
-    },
-    {
-      "type": "range",
-      "id": "logo_width",
-      "label": "t:general.settings.logo_width_desktop.label",
-      "min": 40,
-      "max": 400,
-      "step": 5,
-      "default": 160,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "logo_width_mobile",
-      "label": "t:general.settings.logo_width_mobile.label",
-      "min": 40,
-      "max": 300,
-      "step": 5,
-      "default": 100,
-      "unit": "px"
+    "type": "image_picker",
+    "id": "image_with_text_image",
+    "label": "Image"
     },
     {
       "type": "select",
