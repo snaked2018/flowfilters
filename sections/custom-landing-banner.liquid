@@ -44,7 +44,7 @@
           <a class="btn btn-large btn-secondary hide-empty" href="{{- section.settings.secondary_button_link | default: '#' -}}">{{- section.settings.secondary_button_label | escape -}}</a>
         {%- endif -%}
       </div>
-      <div class="s-footer-sm {{ newsletter_form_class }} clm p-zero js-animate anm anm-fadeInUpLarge {{ content_align }}" style="--w-md:6; --duration: .7s; --delay: .15s;">
+      <div class="s-footer-sm {{ newsletter_form_class }} clm p-zero js-animate anm anm-fadeInUpLarge {{ content_align }}" style="w-100 --w-md:6; --duration: .7s; --delay: .15s;">
         {% render 'newsletter-form', form_id: frm_id , form_name: 'newsletterForm', content_align: content_align %}
       </div>
     </div>
