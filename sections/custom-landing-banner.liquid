@@ -4,12 +4,13 @@
   render 'header-logo', class: 'm-0-auto'
   endcapture
 
+  {{ 'password.css' | asset_url | stylesheet_tag: preload: true }}
   {% style %}
-    .logo__width {
-      --logo-width-desktop: {{ section.settings.logo_width | append: 'px' }};
-      --logo-width-mobile: {{ section.settings.logo_width_mobile | append: 'px' }};
-    }
-    {% endstyle %}
+  .logo__width {
+    --logo-width-desktop: {{ section.settings.logo_width | append: 'px' }};
+    --logo-width-mobile: {{ section.settings.logo_width_mobile | append: 'px' }};
+  }
+  {% endstyle %}
 
   assign desktop_image = 'image' | placeholder_svg_tag: 'placeholder media media-md d-none d-block-md w-100 h-100 of-cover'
   assign mobile_image = 'image' | placeholder_svg_tag: 'placeholder media d-none-md d-block w-100 h-100 of-cover'
