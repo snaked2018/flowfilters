@@ -66,7 +66,7 @@
       <div class="h-100 w-100 media-wrapper anm anm-zoomOut anm-card" style="--duration: .7s;">
         {%- liquid
           if section.settings.mobile_image
-            echo mobile_image | replace: "src=", 'data="mobile" loading="lazy" decoding="async" fetchpriority="low" src='
+            echo mobile_image | replace: 'd-none', "src=", 'data="mobile" loading="lazy" decoding="async" fetchpriority="low" src='
             echo desktop_image | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
             else
             echo desktop_image | replace: 'd-none d-block-md', '' | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
