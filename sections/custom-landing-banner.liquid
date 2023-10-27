@@ -33,7 +33,7 @@
         </div>
         <h2 id="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" class="s-header__title mb-0 hide-empty anm anm-fadeInUpSmall {{ heading_style }}" style="--duration: .6s;">{{- section.settings.heading | escape -}}</h2>
       </div>
-      
+      {{ section.settings.mobile_image }}
       <div class="s-content d-grid r-gap-3x anm anm-fadeInUpLarge anm-card" style="--duration: .7s;">
         {%- for block in section.blocks -%}
           <div class="s-info" {{ block.shopify_attributes }}>
