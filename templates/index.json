@@ -1,1 +1,281 @@
-{"sections":{"28c8894e-419b-4e13-bd8d-402e43a6e90e":{"type":"video-banner","blocks":{"template--21374237835546__28c8894e-419b-4e13-bd8d-402e43a6e90e-content-1":{"type":"content","settings":{"content_position":"center-xs middle-xs ta-center","subheading":"Banner title","heading":"Welcome to our store","description":"<p>Use this text to share brand information with your customers. Introduce a new product, announce an announcement or welcome customers.<\/p>","primary_button_label":"Button label","primary_button_link":"","secondary_button_label":"Button label","secondary_button_link":""}}},"block_order":["template--21374237835546__28c8894e-419b-4e13-bd8d-402e43a6e90e-content-1"],"settings":{"image_overlay_opacity":30,"color_scheme":"color-scheme-1","enable_large_heading":false,"height":"70","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"}},"text":{"type":"text","settings":{"content_alignment":"ta-center m-auto","subheading":"","heading":"Text","heading_size":"h2","description":"<p>Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.<\/p>","button_main_text":"","button_main_link":"","button_sub_text":"","button_sub_link":""}},"product-hotspots":{"type":"product-hotspots","blocks":{"hotspot-0":{"type":"hotspot","settings":{"product":"","top_offset":30,"left_offset":30}},"hotspot-1":{"type":"hotspot","settings":{"product":"","top_offset":35,"left_offset":40}}},"block_order":["hotspot-0","hotspot-1"],"settings":{"subheading":"","heading":"Product hotspots","description":"Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.","enable_pagination":true,"enable_navigation":true,"content_alignment":"ta-left","image_hotspot":"shopify:\/\/shop_images\/Product-1.png","text":"","link":""}},"b0085b4c-5b43-4135-9c78-d0c54ae27207":{"type":"icon-with-text","blocks":{"template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-2":{"type":"item","settings":{"icon_source":"theme_library","options_icon":"global","html_code":"","heading":"Item heading","description":"<p>Share information about your products, policies or services. <\/p>"}},"template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-3":{"type":"item","settings":{"icon_source":"theme_library","options_icon":"camera","html_code":"","heading":"Item heading","description":"<p>Share information about your products, policies or services. <\/p>"}},"template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-1":{"type":"item","settings":{"icon_source":"theme_library","options_icon":"bluetooth","html_code":"","heading":"Item heading","description":"<p>Share information about your products, policies or services. <\/p>"}},"template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4":{"type":"item","settings":{"icon_source":"theme_library","options_icon":"3d-model","html_code":"","heading":"Item heading","description":"<p>Share information about your products, policies or services. <\/p>"}}},"block_order":["template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-2","template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-3","template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-1","template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4"],"settings":{"subheading":"Subheading","heading":"Icon with text","description":"","content_align":"ta-center middle-xs","button_main_text":"","button_main_link":""}},"newsletter":{"type":"newsletter","settings":{"image_overlay_opacity":30,"color_scheme":"color-scheme-1 background","subheading":"","heading":"Newsletter","description":"","content_alignment":"ta-center m-auto"}},"image-with-text":{"type":"image-with-text","blocks":{"text-0":{"type":"text","settings":{"heading":"Text block heading","description":"<p>Share information about your products, policies or services.<\/p>"}},"text-1":{"type":"text","settings":{"heading":"Text block heading","description":"<p>Share information about your products, policies or services.<\/p>"}},"text-2":{"type":"text","settings":{"heading":"Text block heading","description":"<p>Share information about your products, policies or services.<\/p>"}}},"block_order":["text-0","text-1","text-2"],"settings":{"color_scheme":"color-scheme-1 background","subheading":"Subheading","heading":"Image with text","enable_large_heading":false,"height":"70","content_ordering":"text_first","image_ratio":"3\/4","primary_button_label":"Button label","primary_button_link":"","secondary_button_label":"Button label","secondary_button_link":""}},"image-with-text-1":{"type":"image-with-text","blocks":{"text":{"type":"text","settings":{"heading":"Text block heading","description":"<p>Share information about your products, policies or services.<\/p>"}}},"block_order":["text"],"settings":{"color_scheme":"color-scheme-1 background","subheading":"Subheading","heading":"Image with text","enable_large_heading":false,"height":"70","content_ordering":"image_first","image_ratio":"3\/4","primary_button_label":"Button label","primary_button_link":"","secondary_button_label":"Button label","secondary_button_link":""}},"testimonials":{"type":"testimonials","blocks":{"testimonial-0":{"type":"testimonial","settings":{"show_rating":true,"star":4,"name":"Author's Name","job_title":"Loyal Customer","text":"Add customer reviews and testimonials to showcase your store's happy customers.","product":""}},"testimonial-1":{"type":"testimonial","settings":{"show_rating":true,"star":4,"name":"Author's Name","job_title":"Loyal Customer","text":"Add customer reviews and testimonials to showcase your store's happy customers.","product":""}},"testimonial-2":{"type":"testimonial","settings":{"show_rating":true,"star":4,"name":"Author's Name","job_title":"Loyal Customer","text":"Add customer reviews and testimonials to showcase your store's happy customers.","product":""}},"testimonial-3":{"type":"testimonial","settings":{"show_rating":true,"star":4,"name":"Author's Name","job_title":"Loyal Customer","text":"Add customer reviews and testimonials to showcase your store's happy customers.","product":""}},"testimonial-4":{"type":"testimonial","settings":{"show_rating":true,"star":4,"name":"Author's Name","job_title":"Loyal Customer","text":"Add customer reviews and testimonials to showcase your store's happy customers.","product":""}},"testimonial-5":{"type":"testimonial","settings":{"show_rating":true,"star":4,"name":"Author's Name","job_title":"Loyal Customer","text":"Add customer reviews and testimonials to showcase your store's happy customers.","product":""}}},"block_order":["testimonial-0","testimonial-1","testimonial-2","testimonial-3","testimonial-4","testimonial-5"],"settings":{"color_scheme":"color-scheme-1 background","subheading":"","heading":"Testimonials","description":"","show_bought_products":false,"content_align":"ta-left","enable_carousel":true,"show_progress_indicator":false}}},"order":["28c8894e-419b-4e13-bd8d-402e43a6e90e","text","product-hotspots","b0085b4c-5b43-4135-9c78-d0c54ae27207","newsletter","image-with-text","image-with-text-1","testimonials"]}
+{
+  "sections": {
+    "28c8894e-419b-4e13-bd8d-402e43a6e90e": {
+      "type": "video-banner",
+      "blocks": {
+        "template--21374237835546__28c8894e-419b-4e13-bd8d-402e43a6e90e-content-1": {
+          "type": "content",
+          "settings": {
+            "content_position": "center-xs middle-xs ta-center",
+            "subheading": "Banner title",
+            "heading": "Welcome to our store",
+            "description": "<p>Use this text to share brand information with your customers. Introduce a new product, announce an announcement or welcome customers.<\/p>",
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21374237835546__28c8894e-419b-4e13-bd8d-402e43a6e90e-content-1"
+      ],
+      "settings": {
+        "image_overlay_opacity": 30,
+        "color_scheme": "color-scheme-1",
+        "enable_large_heading": false,
+        "height": "70",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+      }
+    },
+    "b0085b4c-5b43-4135-9c78-d0c54ae27207": {
+      "type": "icon-with-text",
+      "blocks": {
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-2": {
+          "type": "item",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "global",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "<p>Share information about your products, policies or services. <\/p>"
+          }
+        },
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-3": {
+          "type": "item",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "camera",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "<p>Share information about your products, policies or services. <\/p>"
+          }
+        },
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-1": {
+          "type": "item",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "bluetooth",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "<p>Share information about your products, policies or services. <\/p>"
+          }
+        },
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4": {
+          "type": "item",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "3d-model",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "<p>Share information about your products, policies or services. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-2",
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-3",
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-1",
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4"
+      ],
+      "settings": {
+        "subheading": "Subheading",
+        "heading": "Icon with text",
+        "description": "",
+        "content_align": "ta-center middle-xs",
+        "button_main_text": "",
+        "button_main_link": ""
+      }
+    },
+    "text": {
+      "type": "text",
+      "settings": {
+        "content_alignment": "ta-center m-auto",
+        "subheading": "",
+        "heading": "Text",
+        "heading_size": "h2",
+        "description": "<p>Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.<\/p>",
+        "button_main_text": "",
+        "button_main_link": "",
+        "button_sub_text": "",
+        "button_sub_link": ""
+      }
+    },
+    "product-hotspots": {
+      "type": "product-hotspots",
+      "blocks": {
+        "hotspot-0": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "top_offset": 30,
+            "left_offset": 30
+          }
+        },
+        "hotspot-1": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "top_offset": 35,
+            "left_offset": 40
+          }
+        }
+      },
+      "block_order": [
+        "hotspot-0",
+        "hotspot-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "heading": "Product hotspots",
+        "description": "Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.",
+        "enable_pagination": true,
+        "enable_navigation": true,
+        "content_alignment": "ta-left",
+        "image_hotspot": "shopify:\/\/shop_images\/Product-1.png",
+        "text": "",
+        "link": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "image_overlay_opacity": 30,
+        "color_scheme": "color-scheme-1 background",
+        "subheading": "",
+        "heading": "Newsletter",
+        "description": "",
+        "content_alignment": "ta-center m-auto"
+      }
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "heading": "Text block heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-scheme-1 background",
+        "subheading": "Subheading",
+        "heading": "Image with text",
+        "enable_large_heading": false,
+        "height": "70",
+        "content_ordering": "image_first",
+        "image_ratio": "3\/4",
+        "primary_button_label": "Button label",
+        "primary_button_link": "",
+        "secondary_button_label": "Button label",
+        "secondary_button_link": ""
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-0": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-0",
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-scheme-1 background",
+        "subheading": "",
+        "heading": "Testimonials",
+        "description": "",
+        "show_bought_products": false,
+        "content_align": "ta-left",
+        "enable_carousel": true,
+        "show_progress_indicator": false
+      }
+    }
+  },
+  "order": [
+    "28c8894e-419b-4e13-bd8d-402e43a6e90e",
+    "b0085b4c-5b43-4135-9c78-d0c54ae27207",
+    "text",
+    "product-hotspots",
+    "newsletter",
+    "image-with-text-1",
+    "testimonials"
+  ]
+}
