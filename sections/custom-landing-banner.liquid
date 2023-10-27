@@ -3,7 +3,7 @@
   assign mobile_image = 'image' | placeholder_svg_tag: 'placeholder media d-none-md d-block w-100 h-100 of-cover'
 
   assign desktop_image_alt  = section.settings.desktop_image.alt | default: section.settings.desktop_image.image | split: '/' | last
-  assign desktop_image = section.settings.desktop_image | image_url: width: section.settings.desktop_image.width | image_tag: widths: '750, 950, 1024, 1200, 1400, 1600, 1800, 2000', sizes: "(min-width: 361px) calc(100vw/2), calc(100vw/3)", alt: desktop_image_alt, id:"mbl-block" class: 'd-none-md d-block-md w-100 h-100 media media-md of-cover'
+  assign desktop_image = section.settings.desktop_image | image_url: width: section.settings.desktop_image.width | image_tag: widths: '750, 950, 1024, 1200, 1400, 1600, 1800, 2000', sizes: "(min-width: 361px) calc(100vw/2), calc(100vw/3)", alt: desktop_image_alt, class: 'mbl-block d-none d-block-md w-100 h-100 media media-md of-cover'
 
   assign mobile_image_alt  = section.settings.mobile_image.alt | default: section.settings.mobile_image.image | split: '/' | last
   assign mobile_image = section.settings.mobile_image | image_url: width: section.settings.mobile_image.width | image_tag: widths: '750, 950', sizes: "(min-width: 361px) calc(100vw/2), calc(100vw/3)", alt: mobile_image_alt, class: 'd-none-md d-block w-100 h-100 media of-cover'
