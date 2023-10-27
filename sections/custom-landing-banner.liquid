@@ -33,6 +33,13 @@
         </div>
         <h2 id="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" class="s-header__title mb-0 hide-empty anm anm-fadeInUpSmall {{ heading_style }}" style="--duration: .6s;">{{- section.settings.heading | escape -}}</h2>
       </div>
+      {%- liquid
+          if section.settings.mobile_image
+            echo mobile_image | replace: "src=", 'data="mobile" loading="lazy" decoding="async" fetchpriority="low" src='
+            echo desktop_image | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
+            else
+            echo desktop_image | replace: 'd-none d-block-md', '' | replace: "src=", 'loading="lazy" decoding="async" fetchpriority="low" src='
+          endif
       <div class="s-content d-grid r-gap-3x anm anm-fadeInUpLarge anm-card" style="--duration: .7s;">
         {%- for block in section.blocks -%}
           <div class="s-info" {{ block.shopify_attributes }}>
