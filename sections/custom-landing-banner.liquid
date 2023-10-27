@@ -34,7 +34,7 @@
         <h2 id="sectionHeading-{{ section.id | md5 | truncate: 12, "" }}" class="s-header__title mb-0 hide-empty anm anm-fadeInUpSmall {{ heading_style }}" style="--duration: .6s;">{{- section.settings.heading | escape -}}</h2>
       </div>
       <div class="h-100 w-100 p-relative o-hidden" style="{{ first_image_style }}; --ratio: {{ section.settings.image_ratio }};--ratio-md: 1/1;">
-      <div class="h-100 w-100 media-wrapper anm anm-zoomOut anm-card" style="--duration: .7s;">
+      <div class="h-100 w-100 media-wrapper anm anm-zoomOut anm-card" style="--duration: .7s; border-radius: 25px;">
         {%- liquid
           if section.settings.mobile_image
             echo mobile_image | replace: "src=", 'data="mobile" loading="lazy" decoding="async" fetchpriority="low" src='
