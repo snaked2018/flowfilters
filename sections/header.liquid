@@ -106,7 +106,7 @@
       <!-- header Navigation -->
       <div class="header__menu d-none center-cs {% if section.settings.enable_drawer == false %} d-flex-lg fd-column {% endif %} js-menu-drawer-content">
         <nav class="header__nav js-header-navigation flex-1 w-100">
-          <ul class="main__menu d-flex fw-wrap m-zero ls-none">
+          <ul class="main__menu d-flex fw-wrap m-zero ls-none" style="justify-content: center;">
             {% for link in section.settings.menu.links %}
               {% assign mega_menu = false %}
               {% for block in section.blocks %}
