@@ -28,6 +28,20 @@
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
       }
     },
+    "text": {
+      "type": "text",
+      "settings": {
+        "content_alignment": "ta-center m-auto",
+        "subheading": "",
+        "heading": "Text",
+        "heading_size": "h2",
+        "description": "<p>Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.<\/p>",
+        "button_main_text": "",
+        "button_main_link": "",
+        "button_sub_text": "",
+        "button_sub_link": ""
+      }
+    },
     "b0085b4c-5b43-4135-9c78-d0c54ae27207": {
       "type": "icon-with-text",
       "blocks": {
@@ -113,20 +127,6 @@
         "content_align": "ta-center middle-xs",
         "button_main_text": "",
         "button_main_link": ""
-      }
-    },
-    "text": {
-      "type": "text",
-      "settings": {
-        "content_alignment": "ta-center m-auto",
-        "subheading": "",
-        "heading": "Text",
-        "heading_size": "h2",
-        "description": "<p>Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.<\/p>",
-        "button_main_text": "",
-        "button_main_link": "",
-        "button_sub_text": "",
-        "button_sub_link": ""
       }
     },
     "product-hotspots": {
@@ -299,8 +299,8 @@
   },
   "order": [
     "28c8894e-419b-4e13-bd8d-402e43a6e90e",
-    "b0085b4c-5b43-4135-9c78-d0c54ae27207",
     "text",
+    "b0085b4c-5b43-4135-9c78-d0c54ae27207",
     "product-hotspots",
     "newsletter",
     "image-with-text-1",
