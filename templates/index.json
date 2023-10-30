@@ -298,6 +298,85 @@
         "enable_carousel": true,
         "show_progress_indicator": false
       }
+    },
+    "30a1c34f-621e-4126-8688-4c9044d956a5": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-1": {
+          "type": "content",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check",
+            "html_code": "",
+            "block_heading": "Collapsible row",
+            "description": "<p>Write content to help customers understand your products or policies<\/p>",
+            "page": ""
+          }
+        },
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-2": {
+          "type": "content",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check",
+            "html_code": "",
+            "block_heading": "Collapsible row",
+            "description": "<p>Write content to help customers understand your products or policies<\/p>",
+            "page": ""
+          }
+        },
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-3": {
+          "type": "content",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check",
+            "html_code": "",
+            "block_heading": "Collapsible row",
+            "description": "<p>Write content to help customers understand your products or policies<\/p>",
+            "page": ""
+          }
+        },
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-4": {
+          "type": "content",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check",
+            "html_code": "",
+            "block_heading": "Collapsible row",
+            "description": "<p>Write content to help customers understand your products or policies<\/p>",
+            "page": ""
+          }
+        },
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-5": {
+          "type": "content",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check",
+            "html_code": "",
+            "block_heading": "Collapsible row",
+            "description": "<p>Write content to help customers understand your products or policies<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-1",
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-2",
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-3",
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-4",
+        "template--21424665395482__30a1c34f-621e-4126-8688-4c9044d956a5-content-5"
+      ],
+      "settings": {
+        "color_scheme": "color-scheme-1 background",
+        "subheading": "",
+        "heading": "Frequently asked questions",
+        "description": "",
+        "content_alignment": "ta-left",
+        "image_ratio": "2\/3",
+        "btn_text": "Check now",
+        "btn_link": "",
+        "show_icon": true,
+        "expand_first_item_initially": true
+      }
     }
   },
   "order": [
@@ -307,6 +386,7 @@
     "text",
     "newsletter",
     "image-with-text-1",
-    "testimonials"
+    "testimonials",
+    "30a1c34f-621e-4126-8688-4c9044d956a5"
   ]
 }
