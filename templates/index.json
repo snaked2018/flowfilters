@@ -10,9 +10,9 @@
             "subheading": "Banner title",
             "heading": "Welcome to our store",
             "description": "<p>Use this text to share brand information with your customers. Introduce a new product, announce an announcement or welcome customers.<\/p>",
-            "primary_button_label": "Button label",
-            "primary_button_link": "",
-            "secondary_button_label": "Button label",
+            "primary_button_label": "OUR FILTERS",
+            "primary_button_link": "shopify:\/\/collections\/frontpage",
+            "secondary_button_label": "",
             "secondary_button_link": ""
           }
         }
