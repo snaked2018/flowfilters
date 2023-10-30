@@ -123,7 +123,7 @@
             "html_code": "",
             "heading": "Item heading",
             "description": "",
-            "top_offset": 15,
+            "top_offset": 13,
             "left_offset": 10,
             "content_position": "tt-htspt-left"
           }
@@ -197,6 +197,7 @@
         "enable_pagination": true,
         "enable_navigation": true,
         "content_alignment": "ta-left",
+        "image_hotspot": "shopify:\/\/shop_images\/Product-2_f868779e-7a3b-4a3d-bf41-85360127ce2b.png",
         "text": "",
         "link": ""
       }
