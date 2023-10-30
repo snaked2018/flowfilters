@@ -50,6 +50,7 @@
         "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-4": {
           "type": "text",
           "settings": {
+            "image": "shopify:\/\/shop_images\/s3.svg",
             "heading": "Install",
             "description": "<p>Professional Installation.<\/p>"
           }
