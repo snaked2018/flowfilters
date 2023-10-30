@@ -98,11 +98,11 @@
       ],
       "settings": {
         "subheading": "",
-        "heading": "Product hotspots",
+        "heading": "Our Filters",
         "description": "Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.",
         "enable_pagination": true,
         "enable_navigation": true,
-        "content_alignment": "ta-left",
+        "content_alignment": "ta-center",
         "image_hotspot": "shopify:\/\/shop_images\/Product-1.png",
         "text": "",
         "link": ""
