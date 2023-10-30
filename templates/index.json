@@ -99,6 +99,7 @@
         "hotspot-0",
         "hotspot-1"
       ],
+      "disabled": true,
       "settings": {
         "subheading": "",
         "heading": "Our Filters",
@@ -108,6 +109,95 @@
         "content_alignment": "ta-center",
         "image_hotspot": "shopify:\/\/shop_images\/Product-1.png",
         "text": "",
+        "link": ""
+      }
+    },
+    "d01bab83-0a2a-4876-babd-ad830b072c7f": {
+      "type": "text-hotspots",
+      "blocks": {
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-1": {
+          "type": "text_hotspot",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check-mark",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "",
+            "top_offset": 15,
+            "left_offset": 10,
+            "content_position": "tt-htspt-left"
+          }
+        },
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-2": {
+          "type": "text_hotspot",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check-mark",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "",
+            "top_offset": 30,
+            "left_offset": 25,
+            "content_position": "tt-htspt-right"
+          }
+        },
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-3": {
+          "type": "text_hotspot",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check-mark",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "",
+            "top_offset": 45,
+            "left_offset": 40,
+            "content_position": "tt-htspt-left"
+          }
+        },
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-4": {
+          "type": "text_hotspot",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check-mark",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "",
+            "top_offset": 60,
+            "left_offset": 55,
+            "content_position": "tt-htspt-right"
+          }
+        },
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-5": {
+          "type": "text_hotspot",
+          "settings": {
+            "icon_source": "theme_library",
+            "options_icon": "check-mark",
+            "html_code": "",
+            "heading": "Item heading",
+            "description": "",
+            "top_offset": 75,
+            "left_offset": 70,
+            "content_position": "tt-htspt-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-1",
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-2",
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-3",
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-4",
+        "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-5"
+      ],
+      "settings": {
+        "color_scheme": "background color-scheme-1",
+        "subheading": "",
+        "heading": "Our Filters",
+        "description": "Browse our products today and make the smart choice for your water. Your journey to pure, refreshing hydration begins here.\"",
+        "display_type": "list",
+        "enable_pagination": true,
+        "enable_navigation": true,
+        "content_alignment": "ta-left",
+        "text": "Check now",
         "link": ""
       }
     },
@@ -472,6 +562,7 @@
     "28c8894e-419b-4e13-bd8d-402e43a6e90e",
     "7f6f4f82-326f-409b-8a91-ad44e24b1824",
     "product-hotspots",
+    "d01bab83-0a2a-4876-babd-ad830b072c7f",
     "b0085b4c-5b43-4135-9c78-d0c54ae27207",
     "text",
     "newsletter",
