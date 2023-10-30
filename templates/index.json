@@ -59,7 +59,7 @@
         "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-4"
       ],
       "custom_css": [
-        ".o-hidden {justify-content: center;}"
+        ".o-hidden {justify-content: center; gap: 50px;}"
       ],
       "settings": {
         "subheading": "",
