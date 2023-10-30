@@ -416,7 +416,7 @@
         "description": "",
         "content_alignment": "ta-left",
         "image_ratio": "2\/3",
-        "btn_text": "Check now",
+        "btn_text": "",
         "btn_link": "",
         "show_icon": true,
         "expand_first_item_initially": true
