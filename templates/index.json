@@ -64,8 +64,20 @@
         "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4": {
           "type": "item",
           "settings": {
-            "icon_source": "theme_library",
+            "icon_source": "custom_img",
             "options_icon": "3d-model",
+            "custom_img": "shopify:\/\/shop_images\/hair-svgrepo-com.svg",
+            "html_code": "",
+            "heading": "Healthy Skin & Hair",
+            "description": "<p>Reduce chlorine to prevent dry skin and damaged hair.<\/p>"
+          }
+        },
+        "6874aad6-da0f-4abc-8316-1ef1ac9602b9": {
+          "type": "item",
+          "settings": {
+            "icon_source": "custom_img",
+            "options_icon": "3d-model",
+            "custom_img": "shopify:\/\/shop_images\/hair-svgrepo-com.svg",
             "html_code": "",
             "heading": "Item heading",
             "description": "<p>Share information about your products, policies or services. <\/p>"
@@ -76,7 +88,8 @@
         "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-2",
         "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-3",
         "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-1",
-        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4"
+        "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-4",
+        "6874aad6-da0f-4abc-8316-1ef1ac9602b9"
       ],
       "settings": {
         "subheading": "Subheading",
