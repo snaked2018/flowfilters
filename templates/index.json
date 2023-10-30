@@ -28,20 +28,6 @@
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
       }
     },
-    "text": {
-      "type": "text",
-      "settings": {
-        "content_alignment": "ta-center m-auto",
-        "subheading": "",
-        "heading": "Solutions for your Water Supply",
-        "heading_size": "h2",
-        "description": "<p>Discover a wide range of innovative water filtration products that cater to your unique needs. Whether you're concerned about impurities, contaminants, or simply want to enhance the taste and quality of your drinking water, PureFlow has the perfect solution for you.<\/p>",
-        "button_main_text": "",
-        "button_main_link": "",
-        "button_sub_text": "",
-        "button_sub_link": ""
-      }
-    },
     "b0085b4c-5b43-4135-9c78-d0c54ae27207": {
       "type": "icon-with-text",
       "blocks": {
@@ -153,7 +139,6 @@
         "hotspot-0",
         "hotspot-1"
       ],
-      "disabled": true,
       "settings": {
         "subheading": "",
         "heading": "Product hotspots",
@@ -164,6 +149,20 @@
         "image_hotspot": "shopify:\/\/shop_images\/Product-1.png",
         "text": "",
         "link": ""
+      }
+    },
+    "text": {
+      "type": "text",
+      "settings": {
+        "content_alignment": "ta-center m-auto",
+        "subheading": "",
+        "heading": "Solutions for your Water Supply",
+        "heading_size": "h2",
+        "description": "<p>Discover a wide range of innovative water filtration products that cater to your unique needs. Whether you're concerned about impurities, contaminants, or simply want to enhance the taste and quality of your drinking water, PureFlow has the perfect solution for you.<\/p>",
+        "button_main_text": "",
+        "button_main_link": "",
+        "button_sub_text": "",
+        "button_sub_link": ""
       }
     },
     "newsletter": {
@@ -299,9 +298,9 @@
   },
   "order": [
     "28c8894e-419b-4e13-bd8d-402e43a6e90e",
-    "text",
     "b0085b4c-5b43-4135-9c78-d0c54ae27207",
     "product-hotspots",
+    "text",
     "newsletter",
     "image-with-text-1",
     "testimonials"
