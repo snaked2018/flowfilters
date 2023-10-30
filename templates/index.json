@@ -66,7 +66,7 @@
           "settings": {
             "icon_source": "custom_img",
             "options_icon": "3d-model",
-            "custom_img": "shopify:\/\/shop_images\/hair-svgrepo-com.svg",
+            "custom_img": "shopify:\/\/shop_images\/hair-svgrepo-com_6eb98918-38bb-4da9-a9c4-19be39e30459.svg",
             "html_code": "",
             "heading": "Healthy Skin & Hair",
             "description": "<p>Reduce chlorine to prevent dry skin and damaged hair.<\/p>"
@@ -79,8 +79,8 @@
             "options_icon": "3d-model",
             "custom_img": "shopify:\/\/shop_images\/hair-svgrepo-com.svg",
             "html_code": "",
-            "heading": "Item heading",
-            "description": "<p>Share information about your products, policies or services. <\/p>"
+            "heading": "Protect Your Gut",
+            "description": "<p>Chlorine can upset your gut balance. Maintain a healthy digestive system.<\/p>"
           }
         }
       },
