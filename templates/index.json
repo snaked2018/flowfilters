@@ -377,6 +377,97 @@
         "show_icon": true,
         "expand_first_item_initially": true
       }
+    },
+    "0b918a62-9987-4324-9b61-99ccf3aa16bc": {
+      "type": "logo-list",
+      "blocks": {
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-1": {
+          "type": "image",
+          "settings": {
+            "logo_link": ""
+          }
+        },
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-2": {
+          "type": "image",
+          "settings": {
+            "logo_link": ""
+          }
+        },
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-3": {
+          "type": "image",
+          "settings": {
+            "logo_link": ""
+          }
+        },
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-4": {
+          "type": "image",
+          "settings": {
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-1",
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-2",
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-3",
+        "template--21424665395482__0b918a62-9987-4324-9b61-99ccf3aa16bc-image-4"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "Logo list",
+        "description": "",
+        "content_alignment": "ta-left",
+        "items_per_row_mobile": "6"
+      }
+    },
+    "7f6f4f82-326f-409b-8a91-ad44e24b1824": {
+      "type": "image-with-text-columns",
+      "blocks": {
+        "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        },
+        "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        },
+        "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-4": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        },
+        "e8e36ac8-0331-4e48-84f1-0d32fb9cb6ce": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-1",
+        "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-2",
+        "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-4",
+        "e8e36ac8-0331-4e48-84f1-0d32fb9cb6ce"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "How We Work",
+        "image_ratio": "3\/4",
+        "content_alignment": "ta-center",
+        "enable_carousel": false,
+        "show_progress_indicator": false,
+        "text": "",
+        "link": ""
+      }
     }
   },
   "order": [
@@ -387,6 +478,8 @@
     "newsletter",
     "image-with-text-1",
     "testimonials",
-    "30a1c34f-621e-4126-8688-4c9044d956a5"
+    "30a1c34f-621e-4126-8688-4c9044d956a5",
+    "0b918a62-9987-4324-9b61-99ccf3aa16bc",
+    "7f6f4f82-326f-409b-8a91-ad44e24b1824"
   ]
 }
