@@ -34,7 +34,7 @@
         "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-1": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/s1.svg",
+            "image": "shopify:\/\/shop_images\/s1_65dab8ab-af93-43d4-90b7-917e0278cf21.svg",
             "heading": "Book",
             "description": "<p>Schedule a Call<\/p>"
           }
@@ -42,7 +42,7 @@
         "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-2": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/s2_a937f579-cea4-4725-8cef-4085183cc0d4.svg",
+            "image": "shopify:\/\/shop_images\/s3_193a3220-065f-4afd-b422-fc62259b94a6.svg",
             "heading": "Site Visit",
             "description": "<p>Free home inspection.<\/p>"
           }
@@ -50,7 +50,7 @@
         "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-4": {
           "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/s3.svg",
+            "image": "shopify:\/\/shop_images\/s2_c3be458d-197d-4411-a23a-bf8864f7945a.svg",
             "heading": "Install",
             "description": "<p>Professional Installation.<\/p>"
           }
