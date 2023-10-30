@@ -35,7 +35,7 @@
           "type": "text",
           "settings": {
             "heading": "Book",
-            "description": "<p>Share information about your products, policies or services.<\/p>"
+            "description": "<p>Schedule a Call<\/p>"
           }
         },
         "template--21424665395482__7f6f4f82-326f-409b-8a91-ad44e24b1824-text-2": {
@@ -49,7 +49,7 @@
           "type": "text",
           "settings": {
             "heading": "Install",
-            "description": "<p>Share information about your products, policies or services.<\/p>"
+            "description": "<p>Free home inspection.<\/p>"
           }
         }
       },
