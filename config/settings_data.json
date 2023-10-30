@@ -16,6 +16,10 @@
     "color_low_stock_badge_background": "#f3e6e2",
     "type_header_font": "poppins_n7",
     "type_body_font": "open_sans_n4",
+    "product_card_image_ratio": "1\/1",
+    "image_fit_type": "of-contain",
+    "show_product_vendor": false,
+    "currency_code_enabled": false,
     "sections": {
       "top-bar": {
         "type": "top-bar",
