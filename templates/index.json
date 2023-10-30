@@ -34,9 +34,9 @@
         "template--21374237835546__b0085b4c-5b43-4135-9c78-d0c54ae27207-item-2": {
           "type": "item",
           "settings": {
-            "icon_source": "theme_library",
+            "icon_source": "custom_svg",
             "options_icon": "global",
-            "html_code": "",
+            "html_code": "<i class=\"fa-solid fa-droplet\"><\/i>",
             "heading": "No More Chlorine Taste",
             "description": "<p>No one likes the taste of chlorine. Our system completely removes that terrible taste.<\/p>"
           }
