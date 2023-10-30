@@ -21,7 +21,7 @@
         "template--21374237835546__28c8894e-419b-4e13-bd8d-402e43a6e90e-content-1"
       ],
       "settings": {
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 0,
         "color_scheme": "color-scheme-1",
         "enable_large_heading": false,
         "height": "70",
