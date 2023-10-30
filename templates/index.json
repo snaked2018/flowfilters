@@ -28,6 +28,42 @@
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
       }
     },
+    "product-hotspots": {
+      "type": "product-hotspots",
+      "blocks": {
+        "hotspot-0": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "top_offset": 30,
+            "left_offset": 30
+          }
+        },
+        "hotspot-1": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "top_offset": 35,
+            "left_offset": 40
+          }
+        }
+      },
+      "block_order": [
+        "hotspot-0",
+        "hotspot-1"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "Product hotspots",
+        "description": "Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.",
+        "enable_pagination": true,
+        "enable_navigation": true,
+        "content_alignment": "ta-left",
+        "image_hotspot": "shopify:\/\/shop_images\/Product-1.png",
+        "text": "",
+        "link": ""
+      }
+    },
     "b0085b4c-5b43-4135-9c78-d0c54ae27207": {
       "type": "icon-with-text",
       "blocks": {
@@ -113,42 +149,6 @@
         "content_align": "ta-center middle-xs",
         "button_main_text": "",
         "button_main_link": ""
-      }
-    },
-    "product-hotspots": {
-      "type": "product-hotspots",
-      "blocks": {
-        "hotspot-0": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "top_offset": 30,
-            "left_offset": 30
-          }
-        },
-        "hotspot-1": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "top_offset": 35,
-            "left_offset": 40
-          }
-        }
-      },
-      "block_order": [
-        "hotspot-0",
-        "hotspot-1"
-      ],
-      "settings": {
-        "subheading": "",
-        "heading": "Product hotspots",
-        "description": "Use this text to share brand information with your customers. Introduce a new product, share an announcement or welcome customers.",
-        "enable_pagination": true,
-        "enable_navigation": true,
-        "content_alignment": "ta-left",
-        "image_hotspot": "shopify:\/\/shop_images\/Product-1.png",
-        "text": "",
-        "link": ""
       }
     },
     "text": {
@@ -298,8 +298,8 @@
   },
   "order": [
     "28c8894e-419b-4e13-bd8d-402e43a6e90e",
-    "b0085b4c-5b43-4135-9c78-d0c54ae27207",
     "product-hotspots",
+    "b0085b4c-5b43-4135-9c78-d0c54ae27207",
     "text",
     "newsletter",
     "image-with-text-1",
