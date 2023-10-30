@@ -1,1 +1,74 @@
-{"type":"footer","name":"Footer Group","sections":{"footer":{"type":"footer","blocks":{"menu-0":{"type":"store_information","settings":{}},"menu-1":{"type":"store_contact","settings":{}},"menu-2":{"type":"newsletter","settings":{}},"menu-3":{"type":"menu_group","settings":{}},"menu-4":{"type":"social_media","settings":{}},"menu-5":{"type":"single_menu","settings":{}}},"block_order":["menu-0","menu-1","menu-2","menu-3","menu-4","menu-5"],"settings":{}},"icon-with-text":{"type":"icon-with-text","blocks":{"item-0":{"type":"item","settings":{"options_icon":"validation"}},"item-1":{"type":"item","settings":{"options_icon":"protect"}},"item-2":{"type":"item","settings":{"options_icon":"box"}},"item-3":{"type":"item","settings":{"options_icon":"like"}}},"block_order":["item-0","item-1","item-2","item-3"],"settings":{}}},"order":["icon-with-text","footer"]}
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu-0": {
+          "type": "store_information",
+          "settings": {
+            "logo_width": 160,
+            "heading": "About your store",
+            "description": "<p>This text area can be used to explain your brand's vision and mission to your customers.<\/p>"
+          }
+        },
+        "menu-1": {
+          "type": "store_contact",
+          "settings": {
+            "contact_heading": "Contact us"
+          }
+        },
+        "menu-2": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_heading": "Newsletter",
+            "newsletter_description": "<p>Write a short sentence about what customers can expect from subcribing your newsletter.<\/p>"
+          }
+        },
+        "menu-3": {
+          "type": "menu_group",
+          "settings": {
+            "menu": "footer",
+            "group_layout": "flexible"
+          }
+        },
+        "menu-4": {
+          "type": "social_media",
+          "settings": {
+            "social_heading": "Follow us",
+            "show_socical_icons": true,
+            "enable_follow_on_shop": true
+          }
+        },
+        "menu-5": {
+          "type": "single_menu",
+          "settings": {
+            "heading": "Footer menu",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "menu-0",
+        "menu-1",
+        "menu-2",
+        "menu-3",
+        "menu-4",
+        "menu-5"
+      ],
+      "settings": {
+        "enable_back_to_top": true,
+        "enable_collapse": false,
+        "color_scheme": "color-scheme-1",
+        "show_currency_selector": true,
+        "show_language_selector": true,
+        "show_payment_methods": true,
+        "enable_quick_links": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
