@@ -104,7 +104,7 @@
       {% endif %}
       {%- render 'predictive-search', class: 'header__search top-0 w-100 left-0 zi-9', form_search_style: form_search_style -%}
       <!-- header Navigation -->
-      <div class="header__menu d-none {% if section.settings.enable_drawer == false %} d-flex-lg fd-column {% endif %} js-menu-drawer-content">
+      <div class="header__menu d-none center-cs {% if section.settings.enable_drawer == false %} d-flex-lg fd-column {% endif %} js-menu-drawer-content">
         <nav class="header__nav js-header-navigation flex-1 w-100">
           <ul class="main__menu d-flex fw-wrap m-zero ls-none">
             {% for link in section.settings.menu.links %}
