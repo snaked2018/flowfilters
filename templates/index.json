@@ -197,7 +197,7 @@
         "enable_pagination": true,
         "enable_navigation": true,
         "content_alignment": "ta-left",
-        "text": "Check now",
+        "text": "",
         "link": ""
       }
     },
