@@ -132,7 +132,7 @@
           "type": "text_hotspot",
           "settings": {
             "icon_source": "theme_library",
-            "options_icon": "check-mark",
+            "options_icon": "processor",
             "html_code": "",
             "heading": "Item heading",
             "description": "",
