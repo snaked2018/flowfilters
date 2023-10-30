@@ -103,6 +103,9 @@
         "6874aad6-da0f-4abc-8316-1ef1ac9602b9",
         "a3bfbc10-699e-4295-9883-471194ebb2e6"
       ],
+      "custom_css": [
+        ".s-content {justify-content: center;}"
+      ],
       "settings": {
         "subheading": "Subheading",
         "heading": "Icon with text",
