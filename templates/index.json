@@ -86,8 +86,9 @@
         "a3bfbc10-699e-4295-9883-471194ebb2e6": {
           "type": "item",
           "settings": {
-            "icon_source": "theme_library",
+            "icon_source": "custom_img",
             "options_icon": "3d-model",
+            "custom_img": "shopify:\/\/shop_images\/shield-alt-svgrepo-com.svg",
             "html_code": "",
             "heading": "Proven Performance",
             "description": "<p>Keep your family safe. Trust in our system, verified to eliminate over 99% of chlorine<\/p>"
