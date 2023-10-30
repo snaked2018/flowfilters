@@ -121,8 +121,8 @@
         ".s-content {justify-content: center;}"
       ],
       "settings": {
-        "subheading": "Subheading",
-        "heading": "Icon with text",
+        "subheading": "",
+        "heading": "Why Choose Flow Filters?",
         "description": "",
         "content_align": "ta-center middle-xs",
         "button_main_text": "",
