@@ -145,8 +145,9 @@
         "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-3": {
           "type": "text_hotspot",
           "settings": {
-            "icon_source": "theme_library",
+            "icon_source": "custom_img",
             "options_icon": "check-mark",
+            "custom_img": "shopify:\/\/shop_images\/rust-svgrepo-com.svg",
             "html_code": "",
             "heading": "Rust-proof",
             "description": "New & Improved Integrated rust-proof, anti-flex aluminium wall mount bracket®. Easy to install.",
