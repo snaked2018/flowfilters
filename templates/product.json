@@ -1,1 +1,372 @@
-{"sections":{"breadcrumb":{"type":"breadcrumb","settings":{}},"main":{"type":"main-product","blocks":{"vendor":{"type":"vendor","settings":{}},"title":{"type":"title","settings":{}},"SKU":{"type":"SKU","settings":{}},"price":{"type":"price","settings":{}},"variants":{"type":"variants","settings":{}},"purchasing":{"type":"purchasing","settings":{}},"description":{"type":"description","settings":{}},"highlights":{"type":"highlights","settings":{}},"pickup_availability":{"type":"pickup_availability","settings":{}},"complementary_products":{"type":"complementary_products","settings":{}}},"block_order":["vendor","title","SKU","price","variants","purchasing","description","highlights","pickup_availability","complementary_products"],"settings":{}},"product-sticky-bar":{"type":"product-sticky-bar","blocks":{"menu_item_0":{"type":"menu_item","settings":{}},"menu_item_1":{"type":"menu_item","settings":{}},"menu_item_2":{"type":"menu_item","settings":{}},"menu_item_3":{"type":"menu_item","settings":{}}},"block_order":["menu_item_0","menu_item_1","menu_item_2","menu_item_3"],"disabled":true,"settings":{}},"detailed-specifications":{"type":"detailed-specifications","blocks":{"specifications":{"type":"specifications","settings":{}}},"block_order":["specifications"],"disabled":true,"settings":{}},"image-with-text-columns":{"type":"image-with-text-columns","blocks":{"text-0":{"type":"text","settings":{}},"text-1":{"type":"text","settings":{}},"text-2":{"type":"text","settings":{}},"text-3":{"type":"text","settings":{}}},"block_order":["text-0","text-1","text-2","text-3"],"settings":{}},"product-recommendation":{"type":"product-recommendation","settings":{}},"testimonials":{"type":"testimonials","blocks":{"testimonial-0":{"type":"testimonial","settings":{}},"testimonial-1":{"type":"testimonial","settings":{}},"testimonial-2":{"type":"testimonial","settings":{}},"testimonial-3":{"type":"testimonial","settings":{}},"testimonial-4":{"type":"testimonial","settings":{}},"testimonial-5":{"type":"testimonial","settings":{}}},"block_order":["testimonial-0","testimonial-1","testimonial-2","testimonial-3","testimonial-4","testimonial-5"],"settings":{}},"image-banner":{"type":"image-banner","blocks":{"content":{"type":"content","settings":{}}},"block_order":["content"],"settings":{}}},"order":["breadcrumb","main","product-sticky-bar","detailed-specifications","image-with-text-columns","product-recommendation","testimonials","image-banner"]}
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "enable_share": true
+          }
+        },
+        "SKU": {
+          "type": "SKU",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_sale_badge": true,
+            "show_tax_and_shipping_policy": true
+          }
+        },
+        "variants": {
+          "type": "variants",
+          "settings": {
+            "show_stock_number": true
+          }
+        },
+        "purchasing": {
+          "type": "purchasing",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout_buttons": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "enable_more_btn": true
+          }
+        },
+        "highlights": {
+          "type": "highlights",
+          "settings": {
+            "display_style": "icon_blocks",
+            "icon_source_1": "theme_library",
+            "primary_options_icon": "3d-model",
+            "html_code_1": "",
+            "primary_heading": "Item Heading",
+            "primary_content": "",
+            "icon_source_2": "theme_library",
+            "secondary_options_icon": "leaf",
+            "html_code_2": "",
+            "secondary_heading": "Item Heading",
+            "secondary_content": "",
+            "icon_source_3": "theme_library",
+            "tertiary_options_icon": "audio-wave",
+            "html_code_3": "",
+            "tertiary_heading": "Item Heading",
+            "tertiary_content": "",
+            "icon_source_4": "theme_library",
+            "quaternary_options_icon": "customer-support",
+            "html_code_4": "",
+            "quaternary_heading": "Item Heading",
+            "quaternary_content": ""
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {
+            "show_expected_pickup_time": true
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Frequently bought together",
+            "products_to_show": 3
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "SKU",
+        "price",
+        "variants",
+        "purchasing",
+        "description",
+        "highlights",
+        "pickup_availability",
+        "complementary_products"
+      ],
+      "settings": {
+        "color_scheme": "color-scheme-1",
+        "media_ratio": "2\/3",
+        "enable_media_zoom": true,
+        "enable_sticky": true,
+        "enable_thumb_mobile": false,
+        "thumbnails_ratio": "1\/1"
+      }
+    },
+    "product-sticky-bar": {
+      "type": "product-sticky-bar",
+      "blocks": {
+        "menu_item_0": {
+          "type": "menu_item",
+          "settings": {
+            "menu_label": "Menu label",
+            "menu_key": ""
+          }
+        },
+        "menu_item_1": {
+          "type": "menu_item",
+          "settings": {
+            "menu_label": "Menu label",
+            "menu_key": ""
+          }
+        },
+        "menu_item_2": {
+          "type": "menu_item",
+          "settings": {
+            "menu_label": "Menu label",
+            "menu_key": ""
+          }
+        },
+        "menu_item_3": {
+          "type": "menu_item",
+          "settings": {
+            "menu_label": "Menu label",
+            "menu_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu_item_0",
+        "menu_item_1",
+        "menu_item_2",
+        "menu_item_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-scheme-1",
+        "show_menu_item": true,
+        "show_purchasing": false,
+        "sticky_button_type": "add_to_cart"
+      }
+    },
+    "detailed-specifications": {
+      "type": "detailed-specifications",
+      "blocks": {
+        "specifications": {
+          "type": "specifications",
+          "settings": {
+            "metafield_keys": "",
+            "collapse_specifications": true
+          }
+        }
+      },
+      "block_order": [
+        "specifications"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "color-scheme-1 background",
+        "heading": "Detailed specification",
+        "description": "",
+        "content_alignment": "ta-left"
+      }
+    },
+    "image-with-text-columns": {
+      "type": "image-with-text-columns",
+      "blocks": {
+        "text-0": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        },
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        },
+        "text-3": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "description": "<p>Share information about your products, policies or services.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-0",
+        "text-1",
+        "text-2",
+        "text-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "heading": "Image with text columns",
+        "image_ratio": "3\/4",
+        "content_alignment": "ta-left",
+        "enable_carousel": true,
+        "show_progress_indicator": true,
+        "text": "Button Label",
+        "link": ""
+      }
+    },
+    "product-recommendation": {
+      "type": "product-recommendation",
+      "settings": {
+        "heading": "Related products",
+        "items_to_show": 4,
+        "items_per_row_on_mobile": "1",
+        "enable_carousel": true,
+        "show_progress_indicator": true,
+        "content_alignment": "ta-left"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-0": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "show_rating": true,
+            "star": 4,
+            "name": "Author's Name",
+            "job_title": "Loyal Customer",
+            "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-0",
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5"
+      ],
+      "settings": {
+        "color_scheme": "color-scheme-1 background",
+        "subheading": "",
+        "heading": "Testimonials",
+        "description": "",
+        "show_bought_products": false,
+        "content_align": "ta-left",
+        "enable_carousel": true,
+        "show_progress_indicator": false
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+            "content_position": "center-xs middle-xs ta-center",
+            "subheading": "Banner title",
+            "heading": "Welcome to our store",
+            "description": "<p>Use this text to share brand information with your customers. Introduce a new product, announce an announcement or welcome customers.<\/p>",
+            "primary_button_label": "Button label",
+            "primary_button_link": "",
+            "secondary_button_label": "Button label",
+            "secondary_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "content"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 30,
+        "color_scheme": "color-scheme-1",
+        "enable_large_heading": false,
+        "height": "70"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "product-sticky-bar",
+    "detailed-specifications",
+    "image-with-text-columns",
+    "product-recommendation",
+    "testimonials",
+    "image-banner"
+  ]
+}
