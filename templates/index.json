@@ -362,7 +362,6 @@
         },
         "testimonial-1": {
           "type": "testimonial",
-          "disabled": true,
           "settings": {
             "show_rating": true,
             "star": 4,
@@ -374,7 +373,6 @@
         },
         "testimonial-2": {
           "type": "testimonial",
-          "disabled": true,
           "settings": {
             "show_rating": true,
             "star": 4,
@@ -386,7 +384,6 @@
         },
         "testimonial-3": {
           "type": "testimonial",
-          "disabled": true,
           "settings": {
             "show_rating": true,
             "star": 4,
@@ -398,7 +395,6 @@
         },
         "testimonial-4": {
           "type": "testimonial",
-          "disabled": true,
           "settings": {
             "show_rating": true,
             "star": 4,
@@ -410,7 +406,6 @@
         },
         "testimonial-5": {
           "type": "testimonial",
-          "disabled": true,
           "settings": {
             "show_rating": true,
             "star": 4,
@@ -428,6 +423,9 @@
         "testimonial-3",
         "testimonial-4",
         "testimonial-5"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "color_scheme": "color-scheme-1 background",
