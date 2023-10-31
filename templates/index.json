@@ -353,11 +353,11 @@
           "type": "testimonial",
           "settings": {
             "show_rating": true,
-            "star": 4,
-            "name": "Author's Name",
+            "star": 5,
+            "name": "Ron R.",
             "job_title": "Loyal Customer",
             "text": "Add customer reviews and testimonials to showcase your store's happy customers.",
-            "product": ""
+            "product": "wh2-55-water-filter"
           }
         },
         "testimonial-1": {
