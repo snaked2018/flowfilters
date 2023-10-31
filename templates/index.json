@@ -172,8 +172,9 @@
         "template--21424665395482__d01bab83-0a2a-4876-babd-ad830b072c7f-text_hotspot-5": {
           "type": "text_hotspot",
           "settings": {
-            "icon_source": "theme_library",
+            "icon_source": "custom_img",
             "options_icon": "check-mark",
+            "custom_img": "shopify:\/\/shop_images\/frame-4-svgrepo-com.svg",
             "html_code": "",
             "heading": "Carbon Cartridge",
             "description": "Large capacity for carbon cartridge.",
